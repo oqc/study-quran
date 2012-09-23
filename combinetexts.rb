@@ -38,8 +38,8 @@ def fix_Q(txt, scope, line_nr, c)
   r
 end
 
-CHAPTER_SIZES.each_pair do |c, v_count|
-  r << "\\midrule\\\\*\n" unless c == 1
+((ARGV[0] || [])[0] == 'q' ? {1 => 7, 2 => 50} : CHAPTER_SIZES).each_pair do |c, v_count|
+  r << "\\midrule\\\\nopagebreak\n" unless c == 1
   r << "\\bsm\n" unless (c == 1 || c == 9)
   v_count.times do |v|
     bsm = (v == 0 && c != 1 && c != 9)  # true is bismallah should be added
@@ -49,12 +49,14 @@ CHAPTER_SIZES.each_pair do |c, v_count|
     r << "#{text_c[0]}\\newline\n" if bsm
     r << "#{fix_q text_c, :c, l, c} &\n"
     r << "#{text_r[0]}\\newline\n" if bsm
-    r << "#{fix_q text_r, :r, l, c} \\\\\n"
+    r << "#{fix_q text_r, :r, l, c} \\\\\\\\\n"
     l += 1
   end
 end
 #r << "\\midrule\n"
 
-open('combined-quran-texts.tex', 'w') { |f| f.puts r }
+
+new_txt = open('study-quran.tex').read.gsub(/^% BEGIN TEXTS.*^% END TEXTS/m, "% BEGIN TEXTS\n#{r}% END TEXTS")
+open('study-quran.tex', 'w') { |f| f.puts new_txt }
 
 

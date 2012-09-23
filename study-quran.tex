@@ -15,9 +15,9 @@
 % \onesidetrue
 
 \ifoneside
-  \documentclass[a4paper, 10pt, oneside, openany]{memoir}
+  \documentclass[a4paper, 9pt, oneside, openany]{memoir}
 \else
-  \documentclass[a4paper, 10pt, twoside, openright]{memoir}
+  \documentclass[a4paper, 9pt, twoside, openright]{memoir}
 \fi
 % Nice class options are:
 %   - twoside, openright (for twosided printing)
@@ -64,7 +64,7 @@
 % but it is not readily available in Ubuntu.
 % Non open source fonts that I like are Tanseek Pro, Nassim
 %\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{Scheherazade}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.3]{Lateef}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.4]{Lateef}
 
 \usepackage{ifthen}
 
@@ -210,15 +210,15 @@
 
 {\Large \emph{Een Arabische Koran met drie vertalingen voor studie doeleinden.}}\\[12cm]
 
-versie 0.1\\\today\\[1.5cm]
+versie 0.2\\\today\\[1.5cm]
 
 
 Dit boek bevat de Koran in het 28-letterige Arabische alphabet\\
 waarin hij oorspronkelijk is opgetekend.\\[1cm]
 
 Daarnaast worden per vers drie vertalingen geboden:\\
-een Engelse vertaling door Edip Yüksel, Laith Saleh al{-}Shaiban \& Martha Schulte{-}Nafeh,\\
-en twee Nederlandse vertalingen door Fred Leemhuis en Sofian S. Siregar.
+een Engelse vertaling van Edip Yüksel, Laith Saleh al{-}Shaiban \& Martha Schulte{-}Nafeh,\\
+en twee Nederlandse vertalingen; van Fred Leemhuis en van Sofian S. Siregar.
 \end{center}
 \vfill\null
 \endgroup
@@ -226,31 +226,42 @@ en twee Nederlandse vertalingen door Fred Leemhuis en Sofian S. Siregar.
 
 % quran quote page
 
-\vspace{2cm}
-\begin{quotation}
+\mbox{~}
 \vspace{3cm}
-\noindent Dit is het boek waar in geen twijfel is,\\
-een gids voor de gewetensvollen. \sourceatright{-- \ql{2:2}}
+
+\begin{quotation}
+\newcommand*{\hidden}[0]{{\small[}\ldots\hspace{-0.04cm}{\small]}}%
+
+\noindent Dit is het boek waar in geen twijfel is, een gids voor de gewetensvollen. \sourceatright{-- \ql{2:2}}
+\vspace{1cm}
+
+\noindent Nee, dit is slechts een herinnering, voor wie wil herinneren.\\
+In vereerde notities, verheven en rein.\\
+Door de handen van schrijvers, edel en deugdzaam. \sourceatright{-- \ql[80:11-16]{80:11}}
 \vspace{1cm}
 
 \noindent Er is geen dwang in de religie;\\
-de juist weg is duidelijk te onderscheiden van de foute weg. [\ldots] \sourceatright{-- \ql{2:256}}
+de juist weg is duidelijk te onderscheiden van de foute weg. \hidden \sourceatright{-- \ql{2:256}}
 \vspace{1cm}
 
-\noindent Hetgeen God Zijn boodschapper in voorzag [\ldots]\\
-zal niet gemonopoliseerd worden de rijken onder jullie.\\
+\noindent Zeg, ``Wat is de grootste getuigenis?''\\
+Zeg, ``God is getuigen tussen mij en jou, en Hij heeft mij deze Koran geïnspireerd zodat ik jullie, en wie het moge berijken, ermee kan waarschuwen. Getuigen jullie dat er naast God andere goden bestaan?''\\
+Zeg, ``Ik getuig hier niet van!''\\
+Zeg, ``Hij is slechts één god, en ik maak me niet schuldig aan het toekennen van deelgenoten zoals jullie doen.'' \sourceatright{-- \ql{6:19}}
+\vspace{1cm}
+
+\noindent Hetgeen God Zijn boodschapper in voorzag \hidden\\
+zal niet gemonopoliseerd worden door de rijken onder jullie.\\
 Jullie mogen nemen van de boodschapper jullie geeft,\\
-maar neem niet wat hij jullie onthoud. [\ldots] \sourceatright{-- \ql{59:7}}
+maar neem niet wat hij jullie onthoud. \hidden \sourceatright{-- \ql{59:7}}
 \vspace{1cm}
 
 \noindent Dit zijn Gods tekenen die Wij aan jou voordragen met waarheid.\\
 Dus, welke overlevering, na God en Zijn tekenen, erkennen zij? \sourceatright{-- \ql{45:6}}
 \vspace{1cm}
 
-\noindent Zeg, ``Wat is de grootste getuigenis?''\\
-Zeg, ``God is getuigen tussen mij en jou, en Hij heeft mij deze Koran geïnspireerd zodat ik jullie, en wie het moge berijken, ermee kan waarschuwen. Getuigen jullie dat er naast God andere goden bestaan?''\\
-Zeg, ``Ik getuig hier niet van!''\\
-Zeg, ``Hij is slecht één god, en ik maak me niet schuldig aan het toekennen van deelgenoten dat jullie doen.'' \sourceatright{-- \ql{6:19}}
+\noindent Hen werd niets anders bevolen dan God te dienen en trouw te zijn aan Zijn systeem, monotheïsme, en het contact gebed te verrichten, en bij te dragen aan verbetering.\\
+Zo is het waardevolle systeem. \sourceatright{-- \ql{98:5}}
 \vspace{1cm}
 
 \noindent De boodshapper zei, ``Mijn Heer, mijn mensen hebben deze Koran verlaten.'' \sourceatright{-- \ql{25:30}}
@@ -274,8 +285,11 @@ Zeg, ``Hij is slecht één god, en ik maak me niet schuldig aan het toekennen va
 % \pagestyle{headings}
 
 
-% \changetext{}{-3cm}{}{}{}  % 3cm less wide, shifting the textblock 2cm to the left
+\changetext{}{-3cm}{1.5cm}{1.5cm}{}  % 3cm less wide, shifting the textblock 2cm to the left
+{\large
 \include{preface}
+}
+\changetext{}{3cm}{-1.5cm}{-1.5cm}{}  % 3cm less wide, shifting the textblock 2cm to the left
 
 
 \mainmatter %this is the main part of the document, starts with page 1 instead of i or ii
@@ -292,9 +306,9 @@ Zeg, ``Hij is slecht één god, en ik maak me niet schuldig aan het toekennen va
 \centerfloat
 \small
 \newcommand{\multicolarab}[2]{\multicolumn{3}{@{}p{17.73cm}@{}}{% 16.8cm used to be
-  \begin{tabular}{@{}>{\raggedleft}p{17cm}@{}>{\raggedleft}p{1.03cm}@{}}%  should add up to the number on the prev line 16cm, 1.1cm
+  \begin{tabular}{@{}>{\raggedleft}p{17cm}@{}>{\raggedleft}p{0.98cm}@{}}%  should add up to the number on the prev line
     \textarab{#2} & \textbf{\textit{#1}}%
-  \end{tabular}}\\*}% the asrterisk makes sure no page is broken there
+  \end{tabular}}\\*}
 \newcommand*{\eng}[1]{\foreignlanguage{english}{#1}}%
 \newcommand*{\ara}[2]{\multicolarab{\nr{#1}}{#2}}%
 \newcommand*{\bsm}[0]{\multicolarab{~}{بسم الله الرحمن الرحيم}}%
@@ -307,6 +321,8 @@ Zeg, ``Hij is slecht één god, en ik maak me niet schuldig aan het toekennen va
     p{.3\textwidth}
   @{}
 }\endhead%
+% \midrule%
+% BEGIN TEXTS
 \ara{1:1}{بسم الله الرحمن الرحيم}
 \eng{In the name of God, the Gracious, the Compassionate.} &
 In de naam van God, de erbarmer, de barmhartige. &
@@ -335,7 +351,7 @@ Leid ons op het rechte Pad. \\
 \eng{the way of those whom you blessed; not of those who received anger, nor of the strayers.*} &
 de weg van hen aan wie U genade geschonken hebt, op wie geen toorn rust en die niet dwalen. &
 Het Pad van degenen aan wie U gunsten hebt geschonken, niet van degenen op wie de toorn rust en niet dat van de dwalenden. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{2:1}{الم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -359,7 +375,7 @@ En degenen die geloven in wat aan jou (O Moehammad) is neergezonden (de Koran) e
 \ara{2:5}{اوليك علي هدي من ربهم واوليك هم المفلحون}
 \eng{These are the ones guided by their Lord, and these are the winners.} &
 Zij volgen de leidraad van hun Heer en zij zijn het die het welgaat. &
-Zij zijn depenen die Leiding van hun Heer ontvangen en zij zijn degenen die welslagen. \\
+Zij zijn degenen die Leiding van hun Heer ontvangen en zij zijn degenen die welslagen. \\
 \ara{2:6}{ان الذين كفروا سوا عليهم انذرتهم ام لم تنذرهم لا يومنون}
 \eng{As for those who do not appreciate, whether you warn them or do not warn them, they will not acknowledge.*} &
 Zij die ongelovig zijn, voor hen maakt het niet uit of je hen waarschuwt of niet; zij geloven niet. &
@@ -379,7 +395,7 @@ Zij trachten Allah en degenen die geloven te bedriegen, maar zij bedriegen niema
 \ara{2:10}{في قلوبهم مرض فزادهم الله مرضا ولهم عذاب اليم بما كانوا يكذبون}
 \eng{In their hearts is a disease, so God increases their disease, and they will have a painful retribution for what they have denied.} &
 In hun harten is een ziekte en God heeft hun ziekte verergerd; voor de leugens die zij spraken krijgen zij een pijnlijke bestraffing. &
-In hun hart is een ziekte (twijfel en huichelarij) en Allah heeft deze ziekte doen verergeren, en voor hen is er een pijnlijke bestratting vanwege wat zij plachten te loochenen. \\
+In hun hart is een ziekte (twijfel en huichelarij) en Allah heeft deze ziekte doen verergeren, en voor hen is er een pijnlijke bestraffing vanwege wat zij plachten te loochenen. \\
 \ara{2:11}{واذا قيل لهم لا تفسدوا في الارض قالوا انما نحن مصلحون}
 \eng{If they are told ''Do not make evil in the land,'' they say, ''But we are the reformers!''} &
 Als men tot hen zegt: ''Brengt geen verderf op de aarde'', zeggen zij: ''Wij scheppen slechts orde.'' &
@@ -391,7 +407,7 @@ Weet: voorwaar, zij zijn de verderfzaaiers, maar zij beseffen liet niet. \\
 \ara{2:13}{واذا قيل لهم امنوا كما امن الناس قالوا انومن كما امن السفها الا انهم هم السفها ولكن لا يعلمون}
 \eng{If they are told, ''acknowledge as the people have acknowledged,'' they say, ''Shall we acknowledge as the fools have acknowledged?'' No, they are the fools but they do not know.} &
 Als men tot hen zegt: ''Gelooft zoals de mensen geloven'', zeggen zij: ''Zullen wij dan geloven zoals de dwazen geloven?'' Toch zijn zij de dwazen, maar zij weten het niet. &
-En als er tot hen wordt gezegd: ''Gelooft zoals de mensen gcloven,'' dan zeggen zij: ''Zullen wij geloven zoals dc dwazen geloven?'' Voorwaar, zij zkin dc dwazen, maar zij weten het niet. \\
+En als er tot hen wordt gezegd: ''Gelooft zoals de mensen geloven,'' dan zeggen zij: ''Zullen wij geloven zoals dc dwazen geloven?'' Voorwaar, zij zijn de dwazen, maar zij weten het niet. \\
 \ara{2:14}{واذا لقوا الذين امنوا قالوا امنا واذا خلوا الي شيطينهم قالوا انا معكم انما نحن مستهزون}
 \eng{If they come across those who have acknowledged, they say, ''We acknowledge,'' and when they are alone with their devils they say, ''We are with you, we were only mocking.''} &
 Als zij hen die geloven ontmoeten zeggen zij: ''Wij geloven'', maar als zij met hun satanische makkers alleen zijn zeggen zij: ''Wij horen bij jullie. Wij waren enkel aan het spotten.'' &
@@ -455,7 +471,7 @@ Hoe kunnen jullie niet in Allah geloven, terwijl jullie levenloos waren en Hij j
 \ara{2:29}{هو الذي خلق لكم ما في الارض جميعا ثم استوي الي السما فسويهن سبع سموت وهو بكل شي عليم}
 \eng{He is the One who created for you all that is in the earth. Moroever, He attended to the universe and made it seven heavens, and He is aware of all things.} &
 Hij is het die voor jullie al wat er op de aarde is geschapen heeft. Toen wendde Hij zich tot de hemel en fatsoeneerde hem tot zeven hemelen. Hij is alwetend. &
-Hij is het Degeme Doe vppr jullie alles wat op aarde is geschapen heeft, daarna wendde Hij Zich tot de hemel en vormde deze tot zeven hemelen. En Hij is Alwetend over alle zaken. \\
+Hij is het degene Doe voor jullie alles wat op aarde is geschapen heeft, daarna wendde Hij Zich tot de hemel en vormde deze tot zeven hemelen. En Hij is Alwetend over alle zaken. \\
 \ara{2:30}{واذ قال ربك للمليكه اني جاعل في الارض خليفه قالوا اتجعل فيها من يفسد فيها ويسفك الدما ونحن نسبح بحمدك ونقدس لك قال اني اعلم ما لا تعلمون}
 \eng{Your Lord said to the angels, ''I am placing a successor on earth.'' They said, ''Would You place in it he who would corrupt it, and shed blood, while we sing Your glory, and praise You?'' He said, ''I know what you do not know.''} &
 Toen jouw Heer tot de engelen zei: ''Ik ga op aarde een plaatsvervanger aanstellen'', zeiden zij: ''Gaat U daar iemand aanstellen die er verderf brengt en bloed vergiet, terwijl wij U lofprijzen en Uw heiligheid eren?'' Hij zei: ''Ik weet wat jullie niet weten.'' &
@@ -475,11 +491,11 @@ Hij zei: ''O Adam, noem hun de namen ervan.'' En toen hij hun de namen ervan had
 \ara{2:34}{واذ قلنا للمليكه اسجدوا لادم فسجدوا الا ابليس ابي واستكبر وكان من الكفرين}
 \eng{We said to the angels, ''Submit to Adam,'' so they submitted except for Iblis, he refused and became arrogant, and became of the ingrates.} &
 Toen Wij tot de engelen zeiden: ''Buigt eerbiedig neer voor Adam'', bogen zij zich eerbiedig neer, behalve Iblies; hij weigerde en was hoogmoedig, want hij was een van de ongelovigen. &
-En toen Wij tot de Engelen zeiden: ''Buigt jullie voor Adam,'' toen bogen zij, bhalve Iblis (de Satan). Hij weigerde en was hooghartig en hij werd één van de ongelogigen. \\
+En toen Wij tot de Engelen zeiden: ''Buigt jullie voor Adam,'' toen bogen zij, behalve Iblis (de Satan). Hij weigerde en was hooghartig en hij werd één van de ongelovigen. \\
 \ara{2:35}{وقلنا يادم اسكن انت وزوجك الجنه وكلا منها رغدا حيث شيتما ولا تقربا هذه الشجره فتكونا من الظلمين}
 \eng{We said, ''O Adam, reside you and your mate in the paradise, and eat from it bountifully as you both wish, and do not approach this tree, else you will be of those who did wrong.''*} &
 En Wij zeiden: ''Adam, jij en je echtgenote mogen de tuin bewonen en jullie mogen ervan in overvloed eten waar jullie maar willen, maar jullie mogen deze boom niet benaderen, want dan behoren jullie tot de onrechtplegers.'' &
-En Wij zeiden: ''O Adam, verblijft in het Paradijs, jij en je vrouw, en eet daaruit overloedig, zoals jullie willen, maar nadert deze boom niet, anders zullen jullie tot de onrechtplegers behoren.'' \\
+En Wij zeiden: ''O Adam, verblijft in het Paradijs, jij en je vrouw, en eet daaruit overvloedig, zoals jullie willen, maar nadert deze boom niet, anders zullen jullie tot de onrechtplegers behoren.'' \\
 \ara{2:36}{فازلهما الشيطن عنها فاخرجهما مما كانا فيه وقلنا اهبطوا بعضكم لبعض عدو ولكم في الارض مستقر ومتع الي حين}
 \eng{So, the devil tricked both and he brought both of them out from what they were in, and We said, ''Descend, you are all enemies of one another. In the land shall be stability for you and luxury for a while.''*} &
 Toen liet de satan hen daaruit afdwalen. Zo bracht hij hen uit de plaats waarin zij waren naar buiten en Wij zeiden: ''Daalt af, elkaar tot vijand; en tijdelijk is er voor jullie op de aarde een verblijfplaats en vruchtgebruik.'' &
@@ -523,11 +539,11 @@ En vraagt (Allah) om hulp door middel ven geduld en de Shalât. En voorwaar, dat
 \ara{2:46}{الذين يظنون انهم ملقوا ربهم وانهم اليه رجعون}
 \eng{The ones who conceive that they will meet their Lord and that to Him they will return.} &
 die menen dat zij hun Heer ontmoeten en dat zij tot Hem terugkeren. &
-(Zij zijn) degenen die ervan overtuigd zijn dat zij hun Heer zullen ontmoeten en dat zij tot jem zullen terugkeren. \\
+(Zij zijn) degenen die ervan overtuigd zijn dat zij hun Heer zullen ontmoeten en dat zij tot Hem zullen terugkeren. \\
 \ara{2:47}{يبني اسريل اذكروا نعمتي التي انعمت عليكم واني فضلتكم علي العلمين}
 \eng{O Children of Israel, remember My blessings that I had blessed you with, and that I had preferred you to all the worlds!} &
 O Israëlieten, denkt aan Mijn genade die Ik jullie geschonken heb en daaraan dat Ik jullie boven de wereldbewoners heb verkozen. &
-O Kindern van Israël, gedenkt Mijn gunst die Ik jullie heb geschonken, en dat Ik jullie heb bevoorecht boven de (andere) volkeren. \\
+O Kinderen van Israël, gedenkt Mijn gunst die Ik jullie heb geschonken, en dat Ik jullie heb bevoorrecht boven de (andere) volkeren. \\
 \ara{2:48}{واتقوا يوما لا تجزي نفس عن نفس شيا ولا يقبل منها شفعه ولا يوخذ منها عدل ولا هم ينصرون}
 \eng{Beware of a day where no person can avail another person, nor will any intercession be accepted from it, nor will any ransom be taken, nor will they have supporters.*} &
 En vreest een dag waarop niemand iets van een ander op zich kan nemen, waarop voor hem geen voorspraak aanvaard, noch losprijs aangenomen wordt en waarop zij geen hulp zullen krijgen. &
@@ -535,7 +551,7 @@ En vreest de Dag waarop geen ziel een andere ziel ergens mee kan bijstaan, en er
 \ara{2:49}{واذ نجينكم من ال فرعون يسومونكم سو العذاب يذبحون ابناكم ويستحيون نساكم وفي ذلكم بلا من ربكم عظيم}
 \eng{We saved you from the people of Pharaoh; they were punishing you with severe retribution, killing your children, and shaming your women. In that was a great trial from your Lord.} &
 Toen Wij jullie van Fir'auns mensen redden die jullie een vreselijk leed berokkenden doordat zij jullie zonen afslachtten en alleen jullie vrouwen in leven lieten. Daarin was een geweldige beproeving van jullie Heer. &
-En (gedenkt) toen Wij wullie van Fir'aun's volgelingen redden, zij kwelden jullie met de zwaarste foltering; zij slachtten jullie zonen ad en lieten jullie dochters in leven. Daarin was een geweldige beproeving van jullie Heer. \\
+En (gedenkt) toen Wij jullie van Fir'aun's volgelingen redden, zij kwelden jullie met de zwaarste foltering; zij slachtten jullie zonen ad en lieten jullie dochters in leven. Daarin was een geweldige beproeving van jullie Heer. \\
 \ara{2:50}{واذ فرقنا بكم البحر فانجينكم واغرقنا ال فرعون وانتم تنظرون}
 \eng{We parted the sea for you, thus We saved you and drowned the people of Pharaoh while you were watching.} &
 En toen Wij voor jullie de zee spleten en jullie zo redden, maar Fir'auns mensen lieten verdrinken, terwijl jullie toekeken. &
@@ -555,15 +571,15 @@ En (gedenkt) toen Wij Môesa de Schrift (de Taurât) en de Foerqân gaven, hopel
 \ara{2:54}{واذ قال موسي لقومه يقوم انكم ظلمتم انفسكم باتخاذكم العجل فتوبوا الي باريكم فاقتلوا انفسكم ذلكم خير لكم عند باريكم فتاب عليكم انه هو التواب الرحيم}
 \eng{Moses said to his people, ''O my people, you have wronged yourselves by taking the calf, so repent to your Maker, and face yourselves. That is better for you with your Maker, so He would forgive you. He is the Forgiving, the Compassionate.''*} &
 En toen Moesa tot zijn volk zei: ''Mijn volk, jullie hebben jezelf onrecht aangedaan doordat jullie het kalf hebben aangenomen. Wendt jullie berouwvol tot jullie maker en doodt dan jezelf. Dat is beter voor jullie bij jullie maker. Dan zal Hij zich genadig tot jullie wenden; Hij is de genadegever, de barmhartige.'' &
-En (gedenkt) toen Môesa tot zijn volk zei: ''O mijn volk! Voorwaar, jullie hebben jezelf onrecht aangedaa doordat jullie het kalf (ter aanbidding) hebben genomen, wendt jullie daarom in berouw tot jullie Schepper en doodt dan julliezelf, dat is beter voor jullie bij jullie Schepper.'' Toen aanvaardde Hij jullie berouw. Voorwaar, Hij is de Meest Berouwaanvaardende, de Meest Barmhartige. \\
+En (gedenkt) toen Môesa tot zijn volk zei: ''O mijn volk! Voorwaar, jullie hebben jezelf onrecht aangedaan doordat jullie het kalf (ter aanbidding) hebben genomen, wendt jullie daarom in berouw tot jullie Schepper en doodt dan julliezelf, dat is beter voor jullie bij jullie Schepper.'' Toen aanvaardde Hij jullie berouw. Voorwaar, Hij is de Meest Berouwaanvaardende, de Meest Barmhartige. \\
 \ara{2:55}{واذ قلتم يموسي لن نومن لك حتي نري الله جهره فاخذتكم الصعقه وانتم تنظرون}
 \eng{When you said, ''O Moses, we will not acknowledge you until we see God openly!'' the lightning bolt took you while you were still staring.*} &
 En toen jullie zeiden: ''Moesa wij zullen jou niet geloven totdat wij God in alle openheid zien'', waarop de donderslag jullie greep, terwijl jullie toekeken. &
-En (gedenkt) toen jullie zeiden: ''O Môesa, wij zullen jou niet geloven totdat wij Allah duidelijk (in Zijn ware gestalte) zien,'' waarop de bklisem jullie greep, terwijl jullie toekeken. \\
+En (gedenkt) toen jullie zeiden: ''O Môesa, wij zullen jou niet geloven totdat wij Allah duidelijk (in Zijn ware gestalte) zien,'' waarop de bliksem jullie greep, terwijl jullie toekeken. \\
 \ara{2:56}{ثم بعثنكم من بعد موتكم لعلكم تشكرون}
 \eng{Then We resurrected you after your death that you may be appreciative.} &
 Toen lieten Wij na jullie dood jullie weer opstaan; misschien zullen jullie dank betuigen. &
-Vervolgens wekken Wij jullie op na jullie dood, hoplijk zullen jullie dankbaar zijn. \\
+Vervolgens wekken Wij jullie op na jullie dood, hopelijk zullen jullie dankbaar zijn. \\
 \ara{2:57}{وظللنا عليكم الغمام وانزلنا عليكم المن والسلوي كلوا من طيبت ما رزقنكم وما ظلمونا ولكن كانوا انفسهم يظلمون}
 \eng{We shaded you with clouds, and sent down to you manna and quails, ''Eat from the goodness of the provisions We have provided you.'' They did not wrong Us, but it was themselves that they wronged.} &
 Toen lieten Wij jullie door de wolken overschaduwen en zonden Wij het manna en de kwartels op jullie neer: ''Eet van de goede dingen die Wij jullie voor jullie levensonderhoud gegeven hebben.'' Zij deden Ons geen onrecht aan, maar zij deden zichzelf onrecht aan. &
@@ -571,7 +587,7 @@ En wij gaven jullie schaduw door middel van de wolk en Wij deden Manna en kwarte
 \ara{2:58}{واذ قلنا ادخلوا هذه القريه فكلوا منها حيث شيتم رغدا وادخلوا الباب سجدا وقولوا حطه نغفر لكم خطيكم وسنزيد المحسنين}
 \eng{We said, ''Enter this town, and eat from it as plentifully as you wish; and enter the gate humbly, and talk amicably, We will then forgive your mistakes, and We will increase for the good-doers.''} &
 En toen Wij zeiden: ''Gaat deze stad binnen en jullie mogen ervan in overvloed eten waar jullie maar willen. Gaat eerbiedig neerbuigend de poort binnen en zegt: 'Vergiffenis!', dan zullen Wij jullie je fouten vergeven en Wij zullen hun die goed doen nog meer doen toekomen.'' &
-En (gedenkt) toen Wij zeiden: ''Gaat deze stad binnen en eet daarvan (het land) van de overvloed, zoveel als jullie willen.'' Gaat buigend de poort binnen en zegt: ''Vergeving!'' Wij zullen jullie jullie fouten vergeven, en Wij zullen vermeerden voor de weldoeners.'' \\
+En (gedenkt) toen Wij zeiden: ''Gaat deze stad binnen en eet daarvan (het land) van de overvloed, zoveel als jullie willen.'' Gaat buigend de poort binnen en zegt: ''Vergeving!'' Wij zullen jullie jullie fouten vergeven, en Wij zullen vermeerderen voor de weldoeners.'' \\
 \ara{2:59}{فبدل الذين ظلموا قولا غير الذي قيل لهم فانزلنا علي الذين ظلموا رجزا من السما بما كانوا يفسقون}
 \eng{But the wicked altered what was said to them into a different saying, thus We sent down upon the wicked an affliction from the sky because they had transgressed.*} &
 Maar zij die onrecht pleegden verwisselden het gezegde met iets anders dan wat tot hen gezegd was. Toen lieten Wij op hen die onrecht pleegden een plaag uit de hemel neerkomen voor het schandelijke dat zij deden. &
@@ -583,7 +599,7 @@ En (gedenkt) toen Môesa water vroeg voor zijn volk, waarop Wij zeiden: ''Sla me
 \ara{2:61}{واذ قلتم يموسي لن نصبر علي طعام وحد فادع لنا ربك يخرج لنا مما تنبت الارض من بقلها وقثايها وفومها وعدسها وبصلها قال اتستبدلون الذي هو ادني بالذي هو خير اهبطوا مصرا فان لكم ما سالتم وضربت عليهم الذله والمسكنه وباو بغضب من الله ذلك بانهم كانوا يكفرون بايت الله ويقتلون النبين بغير الحق ذلك بما عصوا وكانوا يعتدون}
 \eng{You said, ''O Moses, we will not be patient to one type of food, so call for us your Lord that He may bring forth what the earth grows of its beans, cucumbers, garlic, lentils, and onions.'' He said, ''Would you trade what is lowly with what is good?'' Descend to Egypt, you will have in it what you have asked for. They were thus stricken with humiliation and disgrace, and they remained under God's wrath for they were not appreciating God's signs, and killing the prophets with no justification. This is for what they have disobeyed and transgressed.*} &
 En toen jullie zeiden: ''Moesa, wij kunnen het met één soort voedsel niet uithouden. Bid voor ons tot jouw Heer dat Hij ons het een en ander levert van wat de aarde voortbrengt: groente, komkommers, knoflook, linzen en uien.'' Hij zei: ''Willen jullie iets minderwaardigs hebben in plaats van iets beters? Gaat naar Egypte. Daar is wat jullie vragen!'' Zij werden met vernedering en onderwerping getroffen en haalden zich Gods toorn op de hals. Dat was omdat zij ongelovig waren aan Gods tekenen en de profeten zonder enig recht doodden. Dat was omdat zij opstandig en vijandig bleven. &
-En (gedenkt) toen jullie zeiden: ''O Môesa! Wij verdragen het niet om van één soort voedsel te leven, roep daarom voor ons jouw Heer aan, opdat Hij voor on voortbrengt van wat de aarde doet groeien van haar groenten, haar komkommers, haar knoflook, haar linzen en haar uien.'' Hij zei: ''Willen jullie dat wat minderwaardig is, nemen in plaats van het betere? Gaat naar een ander land, en voorwaar, voor jullie zal er zijn wat jullie vroegen.'' En er werd over hen vernedering en ellende gebracht en zij keerden terug onder de toorn van Allah. Dat was omdat zij voortdurent Allah's Tekenen verwierpen en de Profeten dooden, zonder het recht te hebben. Dit was omdat zij opstandig waren en overtredingen plachten te begaan. \\
+En (gedenkt) toen jullie zeiden: ''O Môesa! Wij verdragen het niet om van één soort voedsel te leven, roep daarom voor ons jouw Heer aan, opdat Hij voor on voortbrengt van wat de aarde doet groeien van haar groenten, haar komkommers, haar knoflook, haar linzen en haar uien.'' Hij zei: ''Willen jullie dat wat minderwaardig is, nemen in plaats van het betere? Gaat naar een ander land, en voorwaar, voor jullie zal er zijn wat jullie vroegen.'' En er werd over hen vernedering en ellende gebracht en zij keerden terug onder de toorn van Allah. Dat was omdat zij voortdurend Allah's Tekenen verwierpen en de Profeten doodden, zonder het recht te hebben. Dit was omdat zij opstandig waren en overtredingen plachten te begaan. \\
 \ara{2:62}{ان الذين امنوا والذين هادوا والنصري والصبين من امن بالله واليوم الاخر وعمل صلحا فلهم اجرهم عند ربهم ولا خوف عليهم ولا هم يحزنون}
 \eng{Surely those who acknowledge, and those who are Jewish, and the Nazarenes, and those who follow other religions, any one of them who acknowledge God and the Last day, and do reform, they will have their reward with their Lord, with no fear over them, nor will they grieve.*} &
 Zij die geloven, zij die het jodendom aanhangen, de christenen en de Sabiërs die in God en de laatste dag geloven en die deugdelijk handelen, voor hen is hun loon bij hun Heer en zij hebben niets te vrezen noch zullen zij bedroefd zijn. &
@@ -611,7 +627,7 @@ En (gedenkt) toen Môesa tot zijn volk zei: ''Voorwaar, Allah beveelt jullie dat
 \ara{2:68}{قالوا ادع لنا ربك يبين لنا ما هي قال انه يقول انها بقره لا فارض ولا بكر عوان بين ذلك فافعلوا ما تومرون}
 \eng{They said, ''Call upon your Lord for us that He may clarify which it is.'' He said, ''He says it is a heifer neither too old nor too young, an age between that. So now do as you are commanded.''} &
 Zij zeiden: ''Bid voor ons tot jouw Heer dat Hij ons duidelijk maakt wat zij moet zijn.'' Hij zei: ''Dit zegt Hij, dat zij niet een te oude koe moet zijn en ook niet een die nog niet gekalfd heeft: ertussenin. Doet dus wat jullie bevolen is.'' &
-Zij zeiden: ''Roep voor ons jouw Heer aan, op dat Hij ons duidelijk maakt wat voor koe het moet zijn.'' Hij zei: ''Voorwaar, Hij zegt: 'Het us een koe die niet oud is en niet jong, maar van een leeftijd daartussen'. Doe dan wat jullie bevolen is.'' \\
+Zij zeiden: ''Roep voor ons jouw Heer aan, op dat Hij ons duidelijk maakt wat voor koe het moet zijn.'' Hij zei: ''Voorwaar, Hij zegt: 'Het is een koe die niet oud is en niet jong, maar van een leeftijd daartussen'. Doe dan wat jullie bevolen is.'' \\
 \ara{2:69}{قالوا ادع لنا ربك يبين لنا ما لونها قال انه يقول انها بقره صفرا فاقع لونها تسر النظرين}
 \eng{They said, ''Call upon your Lord for us that He may clarify what color it is.'' He said, ''He says it is a yellow heifer with a bright color, pleasing to those who see it.''} &
 Zij zeiden: ''Bid voor ons tot jouw Heer dat Hij ons duidelijk maakt wat haar kleur moet zijn.'' Hij zei: ''Dit zegt Hij, dat zij een gele koe moet zijn, van een heldere kleur, die de kijkers verheugt.'' &
@@ -651,7 +667,7 @@ En weten zij niet dat Allah weet wat zij verbergen en wat zij openlijk doen? \\
 \ara{2:78}{ومنهم اميون لا يعلمون الكتب الا اماني وان هم الا يظنون}
 \eng{Amongst them are Gentiles who do not know the book except by hearsay, and they only conjecture.*} &
 Onder hen zijn er ongeletterden die het boek op verzinsels na niet kennen en die alleen maar vermoedens hebben. &
-En er zijn ongeletterden onder hen die de Shcrift (de Taurât) niet kennen, behalve door kletspraat en zij vermoeden slechts. \\
+En er zijn ongeletterden onder hen die de Schrift (de Taurât) niet kennen, behalve door kletspraat en zij vermoeden slechts. \\
 \ara{2:79}{فويل للذين يكتبون الكتب بايديهم ثم يقولون هذا من عند الله ليشتروا به ثمنا قليلا فويل لهم مما كتبت ايديهم وويل لهم مما يكسبون}
 \eng{So woe to those who write the book with their hands then say, ''This is from God,'' so that they can seek a cheap gain! Woe to them for what their hands have written, and woe to them for what they have gained.*} &
 Wee hen die het boek eigenhandig schrijven en dan zeggen: ''Dit komt van God'' om het voor een lage prijs te versjacheren. Wee hen dus om wat hun handen hebben geschreven en wee hen om wat zij eraan hebben verdiend. &
@@ -659,7 +675,7 @@ Wee dan degenen die de Schrift met hun eigen handen schrijven en vervolgens zegg
 \ara{2:80}{وقالوا لن تمسنا النار الا اياما معدوده قل اتخذتم عند الله عهدا فلن يخلف الله عهده ام تقولون علي الله ما لا تعلمون}
 \eng{They said, ''The fire will not touch us except for a few number of days.'' Say, ''Have you taken a pledge with God? If so, then God will not break His pledge. Or do you say about God what you do not know?''} &
 En zij zeggen: ''Het vuur zal ons slechts een beperkt aantal dagen treffen.'' Zeg: ''Hebben jullie met God een verbond gesloten -- dan zal God Zijn verbond niet verbreken -- of zeggen jullie over God iets wat jullie niet weten?'' &
-En zij zeiden: ''De Hel zal ons niet aankraken, behalve een beperkt aantal dagen,'' Zeg (O Moehammad): ''Hebben jullie een belofte van Allah ontvangen? Dan zal Allah Zijn belofte niet verbreken. Of zeggen jullie over Allah iets wat jullie niet weten?'' \\
+En zij zeiden: ''De Hel zal ons niet aanraken, behalve een beperkt aantal dagen,'' Zeg (O Moehammad): ''Hebben jullie een belofte van Allah ontvangen? Dan zal Allah Zijn belofte niet verbreken. Of zeggen jullie over Allah iets wat jullie niet weten?'' \\
 \ara{2:81}{بلي من كسب سييه واحطت به خطيته فاوليك اصحب النار هم فيها خلدون}
 \eng{Indeed, whoever gains a bad deed and his mistakes surround him; those are the people of the fire, there they abide eternally.} &
 Ja zeker! Wie slechtheid begaat en wie door zijn fout omgeven wordt, zij zijn het dus die in het vuur thuishoren; zij zullen daarin altijd blijven. &
@@ -671,7 +687,7 @@ Maar degenen die geloven en goede werken verrichten, zij zijn degenen die de bew
 \ara{2:83}{واذ اخذنا ميثق بني اسريل لا تعبدون الا الله وبالولدين احسانا وذي القربي واليتمي والمسكين وقولوا للناس حسنا واقيموا الصلوه واتوا الزكوه ثم توليتم الا قليلا منكم وانتم معرضون}
 \eng{We took the covenant of the Children of Israel, ''You shall not serve except God, and regard your parents, and regard the relatives, and the orphans, and the needy, and say kind things to the people, and observe the Contact prayer, and contribute towards betterment.'' Then you turned away, except a few of you; you were objecting.} &
 En toen Wij het verdrag met de Israëlieten aangingen: ''Jullie zult alleen God dienen. Weest goed voor de ouders, de verwant, de wezen en de behoeftigen. Spreekt tot de mensen ten goede. Verricht de salaat en geeft de zakaat.'' Toen onttrokken jullie je er in jullie afkerigheid aan, op enkelen na. &
-En (gedenkt) toen Wij het verbond van de Kinderen van Israël aanvardden (zeggent): ''Aanbidt niets dan Allah, en betracht goedheid jegens de ouders, en de verwand, en de wees, en de behoeftige, en spreekt het goede tot de mensen en onderhoudt de shalât en geeft de zakât.'' Vervolgens ontrokken jullie je er aan, behalve een klein aantal van jullie, terwijl jullie je afwendden. \\
+En (gedenkt) toen Wij het verbond van de Kinderen van Israël aanvaardden (zeggent): ''Aanbidt niets dan Allah, en betracht goedheid jegens de ouders, en de verwand, en de wees, en de behoeftige, en spreekt het goede tot de mensen en onderhoudt de shalât en geeft de zakât.'' Vervolgens ontrokken jullie je er aan, behalve een klein aantal van jullie, terwijl jullie je afwendden. \\
 \ara{2:84}{واذ اخذنا ميثقكم لا تسفكون دماكم ولا تخرجون انفسكم من ديركم ثم اقررتم وانتم تشهدون}
 \eng{We have taken a covenant with you, ''You shall not spill each other's blood, nor drive each other out from your homes.'' You agreed to this while bearing witness.} &
 En toen Wij het verdrag met jullie aangingen: ''Jullie zult elkaars bloed niet vergieten en elkaar niet uit jullie woningen verdrijven.'' Toen bevestigden jullie het met jullie getuigenis. &
@@ -683,39 +699,39 @@ Daarna zijn jullie (Joden) degenen geworden die elkaar doden en een deel van jul
 \ara{2:86}{اوليك الذين اشتروا الحيوه الدنيا بالاخره فلا يخفف عنهم العذاب ولا هم ينصرون}
 \eng{These are the ones who have purchased this lowly/worldly life instead of the Hereafter. The retribution will not be reduced for them, nor will they be supported.} &
 Zij zijn het die het tegenwoordige leven ten koste van het latere gekocht hebben. Dus zal voor hen de bestraffing niet verlicht worden, noch zullen zij hulp krijgen. &
-Zij zijn degenen die het aardse leven voor het Hiernamaals hebben verruild. De bestraffing zal voor hen niet verlichts worden zn zij zullen niet geholpen worden. \\
+Zij zijn degenen die het aardse leven voor het Hiernamaals hebben verruild. De bestraffing zal voor hen niet verlicht worden en zij zullen niet geholpen worden. \\
 \ara{2:87}{ولقد اتينا موسي الكتب وقفينا من بعده بالرسل واتينا عيسي ابن مريم البينت وايدنه بروح القدس افكلما جاكم رسول بما لا تهوي انفسكم استكبرتم ففريقا كذبتم وفريقا تقتلون}
 \eng{We gave Moses the book, and after him, We sent the messengers. Later We gave Jesus son of Mary the clear proofs, and We supported Him with the Holy Spirit. Is it that every time a messenger comes to you with what your minds do not desire, you become arrogant? A group of them you deny, and a group of them you kill!} &
 Wij hebben aan Moesa het boek gegeven en Wij hebben na hem de gezanten laten navolgen en Wij hebben 'Isa, de zoon van Marjam de duidelijke bewijzen gegeven en hem gesterkt met de heilige geest. Maar telkens als er een gezant tot jullie komt met iets wat jullie niet zint, zijn jullie dan niet hoogmoedig? Dan betichten jullie sommigen van leugens en anderen doden jullie. &
-En Wij hebben Môesa voorzeker het Boek gegeven en Wij deden na hem de Boodschappers volgen. Wn Wij gaven 'Îsa, de zoon van Maryam, de duidelijke bewijzen. En Wij versterkten hem met de heilige Geest (Djibrîl). Is het dan zo dat telkens wanneer er een Boodschapper tot jullie kwam met wat niet in overeenstemming was met jullie begeerten, jullie hooghartig werden en jullie een aantal van hen loochenden en anderen doodden? \\
+En Wij hebben Môesa voorzeker het Boek gegeven en Wij deden na hem de Boodschappers volgen. En Wij gaven 'Îsa, de zoon van Maryam, de duidelijke bewijzen. En Wij versterkten hem met de heilige Geest (Djibrîl). Is het dan zo dat telkens wanneer er een Boodschapper tot jullie kwam met wat niet in overeenstemming was met jullie begeerten, jullie hooghartig werden en jullie een aantal van hen loochenden en anderen doodden? \\
 \ara{2:88}{وقالوا قلوبنا غلف بل لعنهم الله بكفرهم فقليلا ما يومنون}
 \eng{They said, ''Our hearts are uncircumcised/covered!'' No, it is God who has cursed them for their rejection, for very little do they acknowledge.} &
 En zij zeggen: ''Onze harten zijn onbesneden.'' Welnee, God heeft hen om hun ongeloof vervloekt. Hoe weinig is het dus wat zij geloven. &
-En zij zeggen: ''Onze harten zijn bedekt.'' Nee! Allah heeft hen verloekts vanwege hun ongeloof. Weinigen zijn het daarom die geloven. \\
+En zij zeggen: ''Onze harten zijn bedekt.'' Nee! Allah heeft hen vervloekt vanwege hun ongeloof. Weinigen zijn het daarom die geloven. \\
 \ara{2:89}{ولما جاهم كتب من عند الله مصدق لما معهم وكانوا من قبل يستفتحون علي الذين كفروا فلما جاهم ما عرفوا كفروا به فلعنه الله علي الكفرين}
 \eng{When a book came to them from God, authenticating what is with them -- yet before that they were asking for victory against those who were unappreciative -- so when what they knew came to them, they did not appreciate it! God's curse is upon the ingrates.} &
 En toen tot hen een boek van God kwam dat bevestigde wat zij hadden -- voordien hadden zij om bijstand gevraagd tegen hen die ongelovig zijn -- toen dan dat wat zij al wisten tot hen kwam, geloofden zij er niet aan. Gods vloek kome dus over de ongelovigen. &
-En wanneer er een boek tot ben komt van Allah, bevestigend wat zich bij hen bevindt, terwijl zij daarvoor om hulp hadden gevraagd tegen degenen die niet geloven: toen dan tot hen kwam wat zij al wisten, geloofiden zij er niet in. De vloek van Allah vloek rust daarom op de ongelovigen. \\
+En wanneer er een boek tot ben komt van Allah, bevestigend wat zich bij hen bevindt, terwijl zij daarvoor om hulp hadden gevraagd tegen degenen die niet geloven: toen dan tot hen kwam wat zij al wisten, geloofden zij er niet in. De vloek van Allah vloek rust daarom op de ongelovigen. \\
 \ara{2:90}{بيسما اشتروا به انفسهم ان يكفروا بما انزل الله بغيا ان ينزل الله من فضله علي من يشا من عباده فباو بغضب علي غضب وللكفرين عذاب مهين}
 \eng{Miserable indeed is with what they traded themselves by not appreciating what God has sent down. They did so because of their resentment that God would send down from His grace to whom He pleases from among His servants; thus, they have incurred wrath upon wrath. The ingrates will have a humiliating retribution.} &
 Waarvoor zij zich verkocht hebben dat is pas slecht; dat zij niet geloven aan wat God neergezonden heeft, uit nijd dat God iets van Zijn genade neerzendt op wie van Zijn dienaren Hij wil. Het levert hun dus toorn op toorn op. En voor de ongelovigen is er een vernederende bestraffing. &
-Slecht is het, waarvoor zij hun zielen verkocht hebben; dat zij niet geloven in wat Allah heeft neergezonden; uit afgunst, dat Allah zijn gunst neerzendt tot wie hij wil van zijn dienaren. Zo wender zij zich van toorn tot toorn. En voor de ongelovigen is er een vernederende bestraffing. \\
+Slecht is het, waarvoor zij hun zielen verkocht hebben; dat zij niet geloven in wat Allah heeft neergezonden; uit afgunst, dat Allah zijn gunst neerzendt tot wie hij wil van zijn dienaren. Zo wenden zij zich van toorn tot toorn. En voor de ongelovigen is er een vernederende bestraffing. \\
 \ara{2:91}{واذا قيل لهم امنوا بما انزل الله قالوا نومن بما انزل علينا ويكفرون بما وراه وهو الحق مصدقا لما معهم قل فلم تقتلون انبيا الله من قبل ان كنتم مومنين}
 \eng{If it is said to them, ''Acknowledge what God has sent down,'' they say, ''We acknowledge only what was sent down to us,'' and they do not appreciate what came after it, while it is the truth authenticating what is with them. Say, ''Why then did you kill God's prophets if you were those who acknowledge?''} &
 En als er tot hen gezegd wordt: ''Gelooft in wat God heeft neergezonden'' zeggen zij: ''Wij geloven in wat tot ons is neergezonden.'' En zij geloven niet in wat erna gekomen is, terwijl dat juist de waarheid is, ter bevestiging van wat zij hebben. Zeg: ''Waarom hebben jullie dan vroeger Gods profeten gedood, als jullie gelovig zijn?'' &
-en als er tot hen gezegd wordt: ''Gelooft in wat Allah heeft neergezonden,'' zeggen zij: ''Wij geloven in wat aan ons is neergezonden.'' En zij geloven niet in wat erna is (neergezonden), terwijl het de waarheid is, bevestigend wat zich bij hen bevindt. Zeg (O moehammad): ''Waarom hebben jullie dan vroeger de profeten van Allah gedood, als jullie gelovigen zijn?'' \\
+en als er tot hen gezegd wordt: ''Gelooft in wat Allah heeft neergezonden,'' zeggen zij: ''Wij geloven in wat aan ons is neergezonden.'' En zij geloven niet in wat erna is (neergezonden), terwijl het de waarheid is, bevestigend wat zich bij hen bevindt. Zeg (O Moehammad): ''Waarom hebben jullie dan vroeger de profeten van Allah gedood, als jullie gelovigen zijn?'' \\
 \ara{2:92}{ولقد جاكم موسي بالبينت ثم اتخذتم العجل من بعده وانتم ظلمون}
 \eng{Moses had come to you with clear proofs, then you took the calf after him; you were wicked!*} &
 Moesa was toch tot jullie gekomen met de duidelijke bewijzen. Toen namen jullie in onrechtmatigheid het kalf aan, nadat hij weg was gegaan. &
-en voorzeker, Móesa is tot jullie gekomen met de duidelijk bewijzen, warrop jullie het half (ter aanbidding) namen nadat hij was weggeegaan. en jullie waren onrechtplegers. \\
+en voorzeker, Môesa is tot jullie gekomen met de duidelijk bewijzen, waarop jullie het half (ter aanbidding) namen nadat hij was weggegaan. en jullie waren onrechtplegers. \\
 \ara{2:93}{واذ اخذنا ميثقكم ورفعنا فوقكم الطور خذوا ما اتينكم بقوه واسمعوا قالوا سمعنا وعصينا واشربوا في قلوبهم العجل بكفرهم قل بيسما يامركم به ايمنكم ان كنتم مومنين}
 \eng{We took your covenant, and raised the mount above you, ''Take what We have given you with strength, and listen.'' They said, ''We hear and disobey!'' and they had consumed the calf inside their hearts by their rejection. Say, ''Miserable indeed is what your acknowledgement instructs you if you are those who acknowledge!''*} &
 En toen Wij het verdrag met jullie aangingen en de Berg boven jullie verhieven: ''Houdt aan wat Wij jullie gegeven hebben stevig vast en hoort'', zeiden zij: ''Wij hebben gehoord en zijn opstandig geworden.'' En in hun harten waren zij door hun ongeloof doordrenkt van het kalf. Zeg: ''Het is echt slecht wat jullie geloof jullie beveelt, als jullie gelovig zijn.'' &
-En (gedenkt) toen Wij jullie verbond aanvaardden den Wij de (berg) Thôer boven jullie verhieven, (zeggend:) ''Houdt jullie stevig vast aan wat Wij jullie gegeven hebben en luistert''. Zij zeiden: ''Wij hebben geluisterd, maar wij gehoorzamen niet.'' En hun harten waren doordrenkt met (liefde voor) het kalf vanwege hun ongeloof. Zeg (O Moehammad): ''Slecht is het wartoe jullie (vervalste) geloof jullie oproept, als jullie gelovigen zijn (in de Taurât geloven).'' \\
+En (gedenkt) toen Wij jullie verbond aanvaardden den Wij de (berg) Thôer boven jullie verhieven, (zeggend:) ''Houdt jullie stevig vast aan wat Wij jullie gegeven hebben en luistert''. Zij zeiden: ''Wij hebben geluisterd, maar wij gehoorzamen niet.'' En hun harten waren doordrenkt met (liefde voor) het kalf vanwege hun ongeloof. Zeg (O Moehammad): ''Slecht is het waartoe jullie (vervalste) geloof jullie oproept, als jullie gelovigen zijn (in de Taurât geloven).'' \\
 \ara{2:94}{قل ان كانت لكم الدار الاخره عند الله خالصه من دون الناس فتمنوا الموت ان كنتم صدقين}
 \eng{Say, ''If the abode of the Hereafter has been set exclusively for you to the exception of all other people, then you should wish for death if you are truthful!''} &
 Zeg: ''Als de latere woning bij God alleen voor jullie en niet voor de andere mensen is, wenst dan de dood, als jullie gelijk hebt.'' &
-Zeg: ''Als het Huis van het Hiernamaals zij Allah alleen maar voor jullie is, met uitzondering van de andere mensen: wenst dan de dood, als jullie waaractig zijn.'' \\
+Zeg: ''Als het Huis van het Hiernamaals zij Allah alleen maar voor jullie is, met uitzondering van de andere mensen: wenst dan de dood, als jullie waarachtig zijn.'' \\
 \ara{2:95}{ولن يتمنوه ابدا بما قدمت ايديهم والله عليم بالظلمين}
 \eng{They will never wish for it because of what their hands have done; and God is aware of the wicked.} &
 Maar dat zullen zij nooit wensen wegens wat hun handen eerder gedaan hebben. God kent de onrechtplegers. &
@@ -727,11 +743,11 @@ En jij zult hen zeker bevinden als de mensen die het meest begerig zijn naar het
 \ara{2:97}{قل من كان عدوا لجبريل فانه نزله علي قلبك باذن الله مصدقا لما بين يديه وهدي وبشري للمومنين}
 \eng{Say, ''Whoever is an enemy to Gabriel, then know that he has sent it down into your heart by God's permission, authenticating what is already present, and a guide and good news for those who acknowledge.''} &
 Zeg: ''Als iemand een vijand van Djibriel is -- hij heeft het toch met Gods toestemming in jouw hart neergezonden als bevestiging van wat er voordien al was en als leidraad en goed nieuws voor de gelovigen --, &
-Zeg (O Moehammad): ''Wie een vijand van Djibrîl is: voorwar, hij heeft hem (de Koran) in jouw hart neergezonden, met toestemming van Allah, als een bevestiging can wat er vóór (geopenbaard) was, en als Leiding en als een verheugende tijding voor de gelovigen.'' \\
+Zeg (O Moehammad): ''Wie een vijand van Djibrîl is: voorwaar, hij heeft hem (de Koran) in jouw hart neergezonden, met toestemming van Allah, als een bevestiging can wat er vóór (geopenbaard) was, en als Leiding en als een verheugende tijding voor de gelovigen.'' \\
 \ara{2:98}{من كان عدوا لله ومليكته ورسله وجبريل وميكيل فان الله عدو للكفرين}
 \eng{''Whoever was an enemy to God and His angels, and His messengers, and Gabriel, and Michael, then so God is the enemy of those who do not appreciate.''} &
 als iemand een vijand van God, Zijn engelen, Zijn gezanten, Djibriel en Mikaal is? God is ook een vijand van de ongelovigen.'' &
-En wie een vijand van Allah is en van zijn Engelen en vam zijn boodschappers en van djibril en van Mikaa'il: voorwaar, Allah is een vijand van de ongelovigen. \\
+En wie een vijand van Allah is en van zijn Engelen en van zijn boodschappers en van Djibrîl en van Mikaa'il: voorwaar, Allah is een vijand van de ongelovigen. \\
 \ara{2:99}{ولقد انزلنا اليك ايت بينت وما يكفر بها الا الفسقون}
 \eng{We have sent down to you clear signs; only the evil ones would not appreciate them.} &
 Wij hebben toch duidelijke tekenen naar jou neergezonden. Alleen de verdorvenen geloven er niet in. &
@@ -739,15 +755,15 @@ En voorzeker, wij hebben duidelijke verzen tot jou neergezonden. en Alleen de zw
 \ara{2:100}{اوكلما عهدوا عهدا نبذه فريق منهم بل اكثرهم لا يومنون}
 \eng{Whenever they make a pledge, does a group of them break it? Alas, most of them do not acknowledge.} &
 Heeft dan niet telkens als zij een verbintenis aangingen een groep van hen het veronachtzaamd. Jazelfs, de meesten van hen geloven niet. &
-Is het niet zo dat telkens wanneer zij (de ongelovigen) een verbintenis aangingen, zij die (later) van zich afwierpen? Maar de mesesten van hen geloven niet. \\
+Is het niet zo dat telkens wanneer zij (de ongelovigen) een verbintenis aangingen, zij die (later) van zich afwierpen? Maar de meesten van hen geloven niet. \\
 \ara{2:101}{ولما جاهم رسول من عند الله مصدق لما معهم نبذ فريق من الذين اوتوا الكتب كتب الله ورا ظهورهم كانهم لا يعلمون}
 \eng{When a messenger came to them from God, authenticating what was with them, a group of those who had already received the book placed God's book behind their backs as if they did not know.} &
 En toen tot hen een gezant van God kwam die bevestigde wat zij hadden, veronachtzaamde een groep van hen aan wie het boek gegeven was het boek Gods achterbaks alsof zij van niets wisten. &
-En toen er tot hen een boodschapper van allah was gekomen, bevestigend wat bij ben bevond, wierp een groep van degenen aan wie de Schrift(de taurat) gegeven was, het boek van Allah achter hun ruggen, alsof zij niet wisten. \\
+En toen er tot hen een boodschapper van Allah was gekomen, bevestigend wat bij ben bevond, wierp een groep van degenen aan wie de Schrift(de Taurât) gegeven was, het boek van Allah achter hun ruggen, alsof zij niet wisten. \\
 \ara{2:102}{واتبعوا ما تتلوا الشيطين علي ملك سليمن وما كفر سليمن ولكن الشيطين كفروا يعلمون الناس السحر وما انزل علي الملكين ببابل هروت ومروت وما يعلمان من احد حتي يقولا انما نحن فتنه فلا تكفر فيتعلمون منهما ما يفرقون به بين المر وزوجه وما هم بضارين به من احد الا باذن الله ويتعلمون ما يضرهم ولا ينفعهم ولقد علموا لمن اشتريه ما له في الاخره من خلق ولبيس ما شروا به انفسهم لو كانوا يعلمون}
 \eng{They followed what the devils recited regarding Solomon's kingship. Solomon did not reject, but it was the devils that rejected by teaching people magic and what was sent down on the two angels in Babylon, Haroot and Maroot. They would not teach anyone until they would say, ''We are a test, so do not be unappreciative!'' Thus, they teach what can separate a person from his mate; but they cannot harm anyone except by God's permission. They learn what harms them and does not benefit them, and they have known that he who purchases such a thing has no place in the Hereafter. Miserable indeed is what they traded themselves with; if only they knew!} &
 En zij volgden wat de satanische makkers over de heerschappij van Soelaimaan voorlazen en Soelaimaan was niet ongelovig, maar de satanische makkers wel, doordat zij de mensen onderwijs gaven in toverij en in wat neergezonden was op de twee engelen in Babel, Haroet en Maroet. Zij onderwijzen niemand zonder te zeggen: ''Wij zijn slechts een verzoeking. Word niet ongelovig.'' Zo leerden zij van die twee hoe verschil te maken tussen een man en zijn echtgenote. Toch berokkenen zij daarmee niemand schade zonder Gods toestemming. Zij leren wat hen schaadt en niet nut, terwijl ze wel weten dat wie zoiets koopt geen aandeel aan het hiernamaals heeft. Echt slecht is het waarvoor zij zich verkocht hebben. Als zij het maar wisten. &
-An zij volgden wat de satans voorlazen ten tijde van soelaiman 's koninkrijk en soelaiman was niet ongelovig, maar de satans waren ongelovig,zij onderwezen de mensen tovenarij (Sihr) en wat was neergezonden te Babel aan de twee Engelen Haroet en Maroet. En geen van beiden gaven onderricht, zonder dat zij zeiden: ''Voorwaar, wij zijn slechts een beproeving, weast daarom niet ongelovig.'' Zo onderwezen zij hen(trovenarij), waardoor zij een scheiding veroorzaakten tussen een mann en zijn echtgenote. En zij schaadden daarmee niemand, behalve met toestermming van Allah. En zij (de mensen) leerden wat hen schaadde en ben niet baatte. En voorzeker, zij wisten dat, wie dat(tovenarij) koopt, geen aandeel zal hebben in het Hiernamaals. En slecht is het waarvoor zij hun zielen verkochten, als zij het maar wisten. \\
+An zij volgden wat de satans voorlazen ten tijde van Soelaiman's koninkrijk en Soelaiman was niet ongelovig, maar de satans waren ongelovig, zij onderwezen de mensen tovenarij (Sihr) en wat was neergezonden te Babel aan de twee Engelen Haroet en Maroet. En geen van beiden gaven onderricht, zonder dat zij zeiden: ''Voorwaar, wij zijn slechts een beproeving, weast daarom niet ongelovig.'' Zo onderwezen zij hen (trovenarij), waardoor zij een scheiding veroorzaakten tussen een man en zijn echtgenote. En zij schaadden daarmee niemand, behalve met toestermming van Allah. En zij (de mensen) leerden wat hen schaadde en ben niet baatte. En voorzeker, zij wisten dat, wie dat (tovenarij) koopt, geen aandeel zal hebben in het Hiernamaals. En slecht is het waarvoor zij hun zielen verkochten, als zij het maar wisten. \\
 \ara{2:103}{ولو انهم امنوا واتقوا لمثوبه من عند الله خير لو كانوا يعلمون}
 \eng{Had they acknowledged and been aware, it would have brought them a reward from God which is far better if they knew!} &
 Als zij gelovig en godvrezend zouden zijn dan was een beloning van de kant van God beter. Als zij het maar wisten. &
@@ -755,11 +771,11 @@ En als zij hadden geloofd en Allah hadden gevreesd, dan zou (hun) beloning van b
 \ara{2:104}{يايها الذين امنوا لا تقولوا رعنا وقولوا انظرنا واسمعوا وللكفرين عذاب اليم}
 \eng{O you who acknowledge, do not say, ''Shepherd us,'' but say, ''Pay attention to us,'' and listen. For the ingrates is a painful retribution.*} &
 Jullie die geloven! Zegt niet: ''Eerbiedig ons'', maar zegt: ''Let op ons en hoort.'' En voor de ongelovigen is er een pijnlijke bestraffing. &
-O jullie die geloven,zegt niet: ''ra'inâ'', maar zegt: ''Oenzhoernâ'', en luistert. En voor de ongelovigen is er een pijnlijke bestraffing. \\
+O jullie die geloven, zegt niet: ''ra'inâ'', maar zegt: ''Oenzhoernâ'', en luistert. En voor de ongelovigen is er een pijnlijke bestraffing. \\
 \ara{2:105}{ما يود الذين كفروا من اهل الكتب ولا المشركين ان ينزل عليكم من خير من ربكم والله يختص برحمته من يشا والله ذو الفضل العظيم}
 \eng{Neither do those who have not appreciated among the people of the book, nor from among those who have set up partners, wish that any good comes down to you from your Lord. Nevertheless, God chooses with His mercy whom/whomever He wishes; and from God is the greatest favor.} &
 Die mensen van het boek die ongelovig zijn, en de veelgodendienaars willen liever niet dat op jullie iets goeds van jullie Heer wordt neergezonden. Maar God bevoorrecht door Zijn barmhartigheid wie Hij wil. God is vol van geweldige goedgunstigheid. &
-Degenen die ongelovig zijn onder de Lieden van de schrift (de Joden en de christenen) en de voeelgodenaanbidders,wensen niet dat er iets goeds aan jullie wordt neergezonden van jullie Heer. Maar Allah verkiest voor Zijn Barmbartigheid wie Hij en Allah is de bezitter van de Geweldige Gunst. \\
+Degenen die ongelovig zijn onder de Lieden van de schrift (de Joden en de christenen) en de voeelgodenaanbidders, wensen niet dat er iets goeds aan jullie wordt neergezonden van jullie Heer. Maar Allah verkiest voor Zijn Barmbartigheid wie Hij en Allah is de bezitter van de Geweldige Gunst. \\
 \ara{2:106}{ما ننسخ من ايه او ننسها نات بخير منها او مثلها الم تعلم ان الله علي كل شي قدير}
 \eng{We do not duplicate a sign, or make it forgotten, unless We bring one which is like it or even greater. Did you not know that God is capable of all things?*} &
 Welk teken Wij ook afschaffen of doen vergeten, Wij komen met iets beters of overeenkomstigs. Weet jij niet dat God almachtig is? &
@@ -779,7 +795,7 @@ Velen onder de lieden van de schrift wensen dat zij jullie, nadat jullie tot gel
 \ara{2:110}{واقيموا الصلوه واتوا الزكوه وما تقدموا لانفسكم من خير تجدوه عند الله ان الله بما تعملون بصير}
 \eng{Observe the Contact prayer, and contribute towards betterment, and what you bring forth of good for yourselves, you will find it with God. God sees what you do.} &
 Verricht de salaat en geeft de zakaat. En wat jullie vooraf voor jullie zelf aan goeds gedaan hebben, dat zullen jullie bij God vinden. Wat jullie doen doorziet God wel. &
-En onderhoudt de shalât en geeft de zakât en wat jullie hebben vooruit gezonden aan goede daden voor jezelf;jullie zullen het bij Allah aantreffen. Voorwaar, Allah is Alziende over was jullie doen. \\
+En onderhoudt de shalât en geeft de zakât en wat jullie hebben vooruit gezonden aan goede daden voor jezelf; jullie zullen het bij Allah aantreffen. Voorwaar, Allah is Alziende over was jullie doen. \\
 \ara{2:111}{وقالوا لن يدخل الجنه الا من كان هودا او نصري تلك امانيهم قل هاتوا برهنكم ان كنتم صدقين}
 \eng{They said, ''None shall enter paradise except those who are Jewish or Nazarenes;'' this is what they wish! say, ''Bring forth your proof if you are truthful.''*} &
 En zij zeiden: ''Alleen de joden en de christenen zullen de tuin binnengaan.'' Dat zijn hun wensen! Zeg: ''Levert jullie bewijs maar, als jullie gelijk hebben.'' &
@@ -999,7 +1015,7 @@ Voorwaar, in de schepping van de hemelen en de aarde en de afwisseling van de na
 \ara{2:165}{ومن الناس من يتخذ من دون الله اندادا يحبونهم كحب الله والذين امنوا اشد حبا لله ولو يري الذين ظلموا اذ يرون العذاب ان القوه لله جميعا وان الله شديد العذاب}
 \eng{Among the people are some who take other than God as equals to Him, they love them as they love God; but those who acknowledge love God more strongly; and when those who were wicked see the retribution, they will see that all power belongs to God, and that God is severe in retribution.*} &
 Er zijn mensen die aannemen dat er naast God nog gelijken zijn die zij even liefhebben als God, maar zij die geloven hebben God meer lief. Als zij die onrecht plegen maar zouden zien, wanneer zij de bestraffing bemerken, dat de kracht geheel aan God toebehoort en dat God streng is in de bestraffing. &
-En er zijn er onder de mensen die nasst Allah deelgenoten teokennen, die zij liefhebben met de liefde als (die) voor Allah, maar degenen die geloven zijn sterker in liefde voor Allah. En als degenen die onrecht pleegden zouden weten wanneer zij de bestraffing zien, (dan zouden zij weten) dat alle macht aan Allah behoort en dat Allah hard is in de bestraffing. \\
+En er zijn er onder de mensen die naast Allah deelgenoten toekennen, die zij liefhebben met de liefde als (die) voor Allah, maar degenen die geloven zijn sterker in liefde voor Allah. En als degenen die onrecht pleegden zouden weten wanneer zij de bestraffing zien, (dan zouden zij weten) dat alle macht aan Allah behoort en dat Allah hard is in de bestraffing. \\
 \ara{2:166}{اذ تبرا الذين اتبعوا من الذين اتبعوا وراوا العذاب وتقطعت بهم الاسباب}
 \eng{When those who were followed will disown those who followed them, they will see the retribution; all means have abandoned them.} &
 Wanneer zij die nagevolgd werden hen die hen volgden afwijzen en zij de bestraffing zien en hun banden zijn doorgesneden. &
@@ -1043,7 +1059,7 @@ Zij zijn diegenen die de Leiding hebben verruild voor de dwaling en de vergiffen
 \ara{2:176}{ذلك بان الله نزل الكتب بالحق وان الذين اختلفوا في الكتب لفي شقاق بعيد}
 \eng{This is because God has sent down the book with truth; and those who have disputed in the book are in far opposition.} &
 Dat [gebeurt], omdat God het boek met de waarheid heeft neergezonden. Zij die over het boek van mening verschillen zijn het vergaand oneens. &
-Dat is zo omdat Allah de Schrift met de Waarheid heeft neergezonden. En voorwaar, degenen die van mening verschillen over de Schrift verkeren in vegaande verdeelheid. \\
+Dat is zo omdat Allah de Schrift met de Waarheid heeft neergezonden. En voorwaar, degenen die van mening verschillen over de Schrift verkeren in vergaande verdeeldheid. \\
 \ara{2:177}{ليس البر ان تولوا وجوهكم قبل المشرق والمغرب ولكن البر من امن بالله واليوم الاخر والمليكه والكتب والنبين واتي المال علي حبه ذوي القربي واليتمي والمسكين وابن السبيل والسايلين وفي الرقاب واقام الصلوه واتي الزكوه والموفون بعهدهم اذا عهدوا والصبرين في الباسا والضرا وحين الباس اوليك الذين صدقوا واوليك هم المتقون}
 \eng{Piety is not to turn your faces towards the east and the west, but piety is one who acknowledges God and the Last day, and the angels, and the book, and the prophets, and he gives money out of love to the near relatives, and the orphans, and the needy and the wayfarer, and those who ask, and to free the slaves, and he observes the Contact prayer, and contributes towards betterment; and those who keep their pledges when they make a pledge, and those who are patient in the face of good and bad and during persecution. These are the ones who have been truthful, and they are the righteous.} &
 Vroomheid is niet dat jullie je gezichten naar het oosten en het westen wendt, maar vroom is wie gelooft in God, in de laatste dag, in de engelen, in het boek en in de profeten en wie zijn bezit, hoe lief hij dat ook heeft, geeft aan de verwanten, de wezen, de behoeftigen, aan hem die onderweg is, aan de bedelaars en voor [de vrijkoop van] de slaven, en wie de salaat verricht en de zakaat geeft en wie hun verbintenis nakomen, als zij een verbintenis zijn aangegaan en wie volhardend zijn in tegenspoed en rampspoed en ten tijde van strijd. Zij zijn het die oprecht zijn en dat zijn de godvrezenden. &
@@ -1051,7 +1067,7 @@ Het is geen vroomheid dat jullie je gezichten naar het Oosten en het Westen wend
 \ara{2:178}{يايها الذين امنوا كتب عليكم القصاص في القتلي الحر بالحر والعبد بالعبد والانثي بالانثي فمن عفي له من اخيه شي فاتباع بالمعروف وادا اليه باحسن ذلك تخفيف من ربكم ورحمه فمن اعتدي بعد ذلك فله عذاب اليم}
 \eng{O you who acknowledge, equivalent execution has been decreed for you in the cases of killings: the free for the free, the slave for the slave, and the female for the female. Whoever is forgiven anything by his brother, then it is to be followed with good deeds and kindness towards him; that is alleviation from your Lord, and a mercy. Whoever transgresses after that, he will have a painful retribution.*} &
 Jullie die geloven! Aan jullie is voorgeschreven te vergelden bij doodslag: een vrije voor een vrije, een slaaf voor een slaaf en een vrouw voor een vrouw. Als iemand iets wordt kwijtgescholden door zijn broeder dan moet de invordering in redelijkheid en de afdoening aan hem op juiste wijze gebeuren. Dat is een verlichting van jullie Heer en barmhartigheid. Wie daarna overtredingen begaat, voor hem is er een pijnlijke bestraffing. &
-O jullie die geloven, de Qishâsh inzake doodslag is jullie verplicht: de vrije (mens) voor de vrije (mens), de slaaf voor de slaaf, de vrouw voor de vrouw. En degene die dan kwijtschelding zan zijn broeder ontvangt, laat het dan gevolgd worden door een redelijke (eis van de eiser) en genoegdoening voor hem op een goeded (manier, van de schuldige). Dat is een verlichting van jullie Heer en een Barmhartigheid en degene die dan daarna nog overtreedt, voor hem ie er dan een pijnlijke bestraffing. \\
+O jullie die geloven, de Qishâsh inzake doodslag is jullie verplicht: de vrije (mens) voor de vrije (mens), de slaaf voor de slaaf, de vrouw voor de vrouw. En degene die dan kwijtschelding van zijn broeder ontvangt, laat het dan gevolgd worden door een redelijke (eis van de eiser) en genoegdoening voor hem op een goede (manier, van de schuldige). Dat is een verlichting van jullie Heer en een Barmhartigheid en degene die dan daarna nog overtreedt, voor hem ie er dan een pijnlijke bestraffing. \\
 \ara{2:179}{ولكم في القصاص حيوه ياولي الالبب لعلكم تتقون}
 \eng{Through equivalent execution, you will be protecting life, O you who possess intelligence, that you may be righteous.} &
 Voor jullie is er in de vergelding leven, o verstandigen; misschien worden jullie godvrezend. &
@@ -1059,7 +1075,7 @@ En voor jullie is er in de Qishâsh leven, O bezitters van verstand, hopelijk zu
 \ara{2:180}{كتب عليكم اذا حضر احدكم الموت ان ترك خيرا الوصيه للولدين والاقربين بالمعروف حقا علي المتقين}
 \eng{It is decreed for you that if death should come to any of you, that it is best he leaves a will for his family and relatives according to recognized norms. This is a truth for the righteous.*} &
 Aan jullie is voorgeschreven, wanneer een van jullie de dood nabij is, als hij bezit heeft na te laten, om in redelijkheid een [testamentaire] beschikking te maken voor de ouders en de verwanten, als een verplichting voor de godvrezenden. &
-Het is jullie verplicht wanneer de dood één van jullie nabij is, als hij bezit nalaat, een testament te maken voor de ouders en de verwanten, volgens wat redelijk is (dit is) een plicht voor de Moetaqôen. \\
+Het is jullie verplicht wanneer de dood één van jullie nabij is, als hij bezit nalaat, een testament te maken voor de ouders en de verwanten, volgens wat redelijk is (dit is) een plicht voor de Moettaqôen. \\
 \ara{2:181}{فمن بدله بعد ما سمعه فانما اثمه علي الذين يبدلونه ان الله سميع عليم}
 \eng{Whoever alters it after having heard, the sin will be upon those who alter it. God is Hearer, Omniscient.} &
 Als iemand het dan verandert nadat hij het gehoord heeft, dan wordt de schuld voor het vergrijp hun die het veranderen aangerekend; God is wetend en horend. &
@@ -1087,15 +1103,15 @@ En wanneer Mijn dienaren jou (O Moehammad) vragen stellen over Mij: voorwaar, Ik
 \ara{2:187}{احل لكم ليله الصيام الرفث الي نسايكم هن لباس لكم وانتم لباس لهن علم الله انكم كنتم تختانون انفسكم فتاب عليكم وعفا عنكم فالن بشروهن وابتغوا ما كتب الله لكم وكلوا واشربوا حتي يتبين لكم الخيط الابيض من الخيط الاسود من الفجر ثم اتموا الصيام الي اليل ولا تبشروهن وانتم عكفون في المسجد تلك حدود الله فلا تقربوها كذلك يبين الله ايته للناس لعلهم يتقون}
 \eng{It has been made lawful for you during the night of fasting to approach your women sexually. They are a garment for you and you are a garment for them. God knows that you used to betray yourselves so He has accepted your repentance, and forgiven you; now you may approach them and seek what God has written for you. You may eat and drink until the white thread is distinct from the black thread of dawn; then you shall complete the fast until night; and do not approach them while you are devoted in the temples. These are God's boundaries, so do not transgress them. It is thus that God makes His signs clear to the people that they may be righteous.*} &
 Het is jullie toegestaan in de nacht van de vasten omgang met jullie vrouwen te hebben; zij zijn bekleding voor jullie en jullie bekleding voor haar. God weet dat jullie jezelf bedriegen, dus heeft Hij zich genadig tot jullie gewend en jullie vergeven. Hebt nu dus gemeenschap met haar en streeft naar wat God jullie heeft voorgeschreven. Eet en drinkt totdat voor jullie in de morgenschemering de witte draad van de zwarte draad te onderscheiden is. Vast dan volledig tot aan de nacht. En hebt geen gemeenschap met haar, terwijl jullie in de moskeeën verblijven. Dat zijn Gods beperkingen. Komt die niet te na. Zo maakt God Zijn tekenen aan de mensen duidelijk. Misschien zullen jullie godvrezend worden. &
-Het is jullie in de nachten van het vasten toegestaan omgang te hebben met jullie vrouwen. Zij zijn (als) kleding voor jullie en jullie zijn (als) kleding voor hen. Allah wist dat jullie jezelf bedrogen, Hij aanvaardde jullie berouw en vergaf jullie. Nu mogen jullie dan omgang met hen hebben. En streeft naar wat Allah voor jullie bepaald heeft. En eet en drinkt tot de witte draad en de zwarte draad voor jullie te onderscheiden is, het is Fadjr (ochtendschemering). Maakt daarna het vasten vol tot zonsondergang. En hebt geen omgang met hen, terwijl jullie I'tikâf in de moskeeen verrichten. Dat zijn de greenzen van Allah, nadert deze daarorn niet. Zo maakt Allah Zijn Tekenen duidelijk voor de mensen, hopelijk zullen zij (Allah) vrezen. \\
+Het is jullie in de nachten van het vasten toegestaan omgang te hebben met jullie vrouwen. Zij zijn (als) kleding voor jullie en jullie zijn (als) kleding voor hen. Allah wist dat jullie jezelf bedrogen, Hij aanvaardde jullie berouw en vergaf jullie. Nu mogen jullie dan omgang met hen hebben. En streeft naar wat Allah voor jullie bepaald heeft. En eet en drinkt tot de witte draad en de zwarte draad voor jullie te onderscheiden is, het is Fadjr (ochtendschemering). Maakt daarna het vasten vol tot zonsondergang. En hebt geen omgang met hen, terwijl jullie I'tikâf in de moskeeën verrichten. Dat zijn de grenzen van Allah, nadert deze daarom niet. Zo maakt Allah Zijn Tekenen duidelijk voor de mensen, hopelijk zullen zij (Allah) vrezen. \\
 \ara{2:188}{ولا تاكلوا امولكم بينكم بالبطل وتدلوا بها الي الحكام لتاكلوا فريقا من امول الناس بالاثم وانتم تعلمون}
 \eng{Do not consume your money between you unjustly by bribing the decision-makers so that you may consume a part of the other people's money sinfully while you know!*} &
 Verteert niet onderling door bedrog elkaars bezittingen en gebruikt ze niet om ermee de rechters te beïnvloeden, om een deel van de bezittingen van de mensen willens en wetens in zonde te verteren. &
-En eet niet onderling van jullie bezittingen op onwettige wijze door deze (bezittingen op misleidend wijze) voor de rechters te brengen, zodart jullie op zondige wijze van een gedeelte van de bezittingen van de mensen kunnen eten, terwijil jullie het weten. \\
+En eet niet onderling van jullie bezittingen op onwettige wijze door deze (bezittingen op misleidend wijze) voor de rechters te brengen, zodat jullie op zondige wijze van een gedeelte van de bezittingen van de mensen kunnen eten, terwijl jullie het weten. \\
 \ara{2:189}{يسلونك عن الاهله قل هي موقيت للناس والحج وليس البر بان تاتوا البيوت من ظهورها ولكن البر من اتقي واتوا البيوت من ابوبها واتقوا الله لعلكم تفلحون}
 \eng{They ask you regarding the new moons, say, ''They are a timing mechanism for the people as well as for the Pilgrimage.'' Piety is not that you would enter a home from its back, but piety is whoever is aware and comes to the homes through their main doors. Be conscientious of God that you may succeed.*} &
 Zij vragen jou naar de nieuwe manen. Zeg: ''Zij zijn tijdsaanduidingen voor de mensen en de bedevaart.'' Vroomheid is niet dat jullie de huizen aan de achterkant ingaat, maar vroom is wie godvrezend is. Gaat dus door de deuren de huizen in en vreest God; misschien dat het jullie welgaat. &
-Zij vragen jou (Moehammad) over de nieuwe manen. Zeg: ''Zij zijn tijdsaanduidingen voor de mensen en (voor het vastellen van) de Haddj. En het is geen vroomheid dat jullie de huizen binnengaan aan de achterzijden, vroom zijn zij (Allah) vrezen en die de huizen binnengaan door hun deuren. En vreest Allah, hopelijk zullen jullie welslagen. \\
+Zij vragen jou (Moehammad) over de nieuwe manen. Zeg: ''Zij zijn tijdsaanduidingen voor de mensen en (voor het vaststellen van) de Haddj. En het is geen vroomheid dat jullie de huizen binnengaan aan de achterzijden, vroom zijn zij (Allah) vrezen en die de huizen binnengaan door hun deuren. En vreest Allah, hopelijk zullen jullie welslagen. \\
 \ara{2:190}{وقتلوا في سبيل الله الذين يقتلونكم ولا تعتدوا ان الله لا يحب المعتدين}
 \eng{Fight in the cause of God against those who fight you, but do not transgress, God does not like the aggressors.*} &
 En bestrijdt op Gods weg hen die jullie bestrijden, maar begaat geen overtredingen; God bemint de overtreders niet. &
@@ -1103,7 +1119,7 @@ En strijdt op de Weg van Allah tegen degenen die tegen jullie strijden en overtr
 \ara{2:191}{واقتلوهم حيث ثقفتموهم واخرجوهم من حيث اخرجوكم والفتنه اشد من القتل ولا تقتلوهم عند المسجد الحرام حتي يقتلوكم فيه فان قتلوكم فاقتلوهم كذلك جزا الكفرين}
 \eng{Kill them wherever you find them, and expel them from where they expelled you, and know that persecution is worse than being killed. Do not fight them at the Restricted Temple unless they fight you in it; if they fight you then kill them. Thus is the reward of those who do not appreciate.} &
 Doodt hen waar jullie hen aantreffen en verdrijft hen waarvandaan zij jullie verdreven hebben. Verzoeking is erger dan te doden. Strijdt niet tegen hen bij de heilige moskee, zolang zij daarin niet tegen jullie strijden. Als zij tegen jullie strijden, strijdt dan tegen hen; zo is de vergelding voor de ongelovigen. &
-En doodt hen waar jullie hen ook aantreffen en verdrijft hen zoals zij jullie hebben verdreven. En Fitnah is erger dan doodslag. En bestrijdt hen niet bij de Masdjid al Harâm (de Gewijde Moskee te Mekkah) totdat zij jullie daar bestrijden; als zij jullie dan bestrijden: doodt hen dan. Zo is de vergeliding voor de ongelovigen. \\
+En doodt hen waar jullie hen ook aantreffen en verdrijft hen zoals zij jullie hebben verdreven. En Fitnah is erger dan doodslag. En bestrijdt hen niet bij de Masdjid al Harâm (de Gewijde Moskee te Mekkah) totdat zij jullie daar bestrijden; als zij jullie dan bestrijden: doodt hen dan. Zo is de vergelding voor de ongelovigen. \\
 \ara{2:192}{فان انتهوا فان الله غفور رحيم}
 \eng{If they cease, then God is Forgiving, Compassionate.} &
 Maar als zij ophouden, dan is God vergevend en barmhartig. &
@@ -1115,15 +1131,15 @@ En bestrijdt hen tot er geen Fitnah (meer) is en de godsdienst aan Allah behoort
 \ara{2:194}{الشهر الحرام بالشهر الحرام والحرمت قصاص فمن اعتدي عليكم فاعتدوا عليه بمثل ما اعتدي عليكم واتقوا الله واعلموا ان الله مع المتقين}
 \eng{The Restricted Month is for the Restricted Month. The restrictions are mutual. Whoever attacks you, then you shall attack him the same as he attacked you; and be conscientious of God, and know that God is with the righteous.} &
 De heilige maand in plaats van de heilige maand: vergelding is van toepassing op de heilige dingen. Als iemand dus tegen jullie in overtreding is, mogen jullie tegen hem zo optreden als hij tegen jullie optrad. En vreest God en weet dat God met de godvrezenden is. &
-De gewijde maand om de gewijde maand, (in) de gewijde (plaatesen en maanden) geldt de Qishâsh. Wie dan tegen jullie overtreedt, overtreedt dan tegen hem dan en dezelfde mate waarin hij tegen jullie overtreedt. En vreest Allah en weet dat Allah met de Moettaqôen is. \\
+De gewijde maand om de gewijde maand, (in) de gewijde (plaatsen en maanden) geldt de Qishâsh. Wie dan tegen jullie overtreedt, overtreedt dan tegen hem dan en dezelfde mate waarin hij tegen jullie overtreedt. En vreest Allah en weet dat Allah met de Moettaqôen is. \\
 \ara{2:195}{وانفقوا في سبيل الله ولا تلقوا بايديكم الي التهلكه واحسنوا ان الله يحب المحسنين}
 \eng{Spend in the cause of God, but do not throw your resources to disaster. Do kindness, for God loves those who do kindness.} &
 Geeft bijdragen op Gods weg en stort jullie niet eigenhandig in de ondergang, en doet goed. God bemint hen die goed doen. &
-En geeft bijdragen op de Weg van allah, en stort jullie niet door eigen toedoen in de ondergang, en doet goed. Voorwaar, Allah heeft de weldoeners lief. \\
+En geeft bijdragen op de Weg van Allah, en stort jullie niet door eigen toedoen in de ondergang, en doet goed. Voorwaar, Allah heeft de weldoeners lief. \\
 \ara{2:196}{واتموا الحج والعمره لله فان احصرتم فما استيسر من الهدي ولا تحلقوا روسكم حتي يبلغ الهدي محله فمن كان منكم مريضا او به اذي من راسه ففديه من صيام او صدقه او نسك فاذا امنتم فمن تمتع بالعمره الي الحج فما استيسر من الهدي فمن لم يجد فصيام ثلثه ايام في الحج وسبعه اذا رجعتم تلك عشره كامله ذلك لمن لم يكن اهله حاضري المسجد الحرام واتقوا الله واعلموا ان الله شديد العقاب}
 \eng{Complete the Pilgrimage and the visit for God. But, if you are prevented, then make what is affordable of donation, and do not shave your heads until the donation reaches its destination. Whoever of you is ill or has an affliction to his head, then he may redeem by fasting or giving a charity or a sacrifice. But if you are able, then whoever continues the visit until the Pilgrimage, then he shall provide what is affordable of donation. If one cannot find anything, then he must fast for three days during the Pilgrimage and seven when he returns; this will make a complete ten; this is for those whose family is not present at the Restricted Temple. Be conscientious of God, and know that God is severe in retribution.*} &
 En volbrengt voor God de bedevaart en het bezoek. Als jullie verhinderd zijn, brengt dan zoveel offergave als gemakkelijk is en scheert jullie hoofden pas als de offergave zijn bestemming [om geslacht te worden] heeft bereikt, maar als iemand van jullie ziek is of een letsel aan zijn hoofd heeft, dan is er een compensatie die bestaat uit vasten of een aalmoes of een offerdier. Als jullie vrij van vrees zijn, dan moet wie van het bezoek tot aan de bedevaart profiteert zoveel offergave brengen als gemakkelijk is. Als iemand niets te geven vindt, dan een vasten van drie dagen tijdens de bedevaart en zeven wanneer jullie teruggekeerd zijn; dat zijn er in totaal tien. Dat is voor diegene van wie de familie niet bij de heilige moskee woonachtig is. Vreest God en weet dat God streng is in de afstraffing. &
-En verricht de Haddj en de 'Oemrah voor Allah. En indien iemand dan verhinderd is, laat die dan een offerdier (slachten) dat makkelijk te vinden is, en escheert jullie hoofden niet tot het offerdier zijn slachtplaats heeft bereikt. (Voor) wie van jullie ziek is of iets aan zijn hoofd heeft, dat hem last bezorgt (en waardoor scheren noodzakelijk is) is er Fidyah (een vervangende plicht): het vasten of het voeden (van armen) of het slachten van een offerdier. En wanneer jullie in veiligheid zijn en (het betreft) degene die de Haddj op de Tamattoe'-wijze verricht, laat hem dan offeren wat makkelijk te vinden is. Maar degene die niets vindt, (voor hem geldt) dan het vasten: drie dagen gedurende de Haddj en zeven (dagen) wanneer jullie teruggekeerd, dat is tien bijelkaar. Dat geldt voor degene wiens gezinsleden niet bij de Masdjid al Harâm (de Gewijde Moskee te Mekkah) wonen. En vreest Allah en weet dat Allah hard is in de bestraffing. \\
+En verricht de Haddj en de 'Oemrah voor Allah. En indien iemand dan verhinderd is, laat die dan een offerdier (slachten) dat makkelijk te vinden is, en scheert jullie hoofden niet tot het offerdier zijn slachtplaats heeft bereikt. (Voor) wie van jullie ziek is of iets aan zijn hoofd heeft, dat hem last bezorgt (en waardoor scheren noodzakelijk is) is er Fidyah (een vervangende plicht): het vasten of het voeden (van armen) of het slachten van een offerdier. En wanneer jullie in veiligheid zijn en (het betreft) degene die de Haddj op de Tamattoe'-wijze verricht, laat hem dan offeren wat makkelijk te vinden is. Maar degene die niets vindt, (voor hem geldt) dan het vasten: drie dagen gedurende de Haddj en zeven (dagen) wanneer jullie teruggekeerd, dat is tien bij elkaar. Dat geldt voor degene wiens gezinsleden niet bij de Masdjid al Harâm (de Gewijde Moskee te Mekkah) wonen. En vreest Allah en weet dat Allah hard is in de bestraffing. \\
 \ara{2:197}{الحج اشهر معلومت فمن فرض فيهن الحج فلا رفث ولا فسوق ولا جدال في الحج وما تفعلوا من خير يعلمه الله وتزودوا فان خير الزاد التقوي واتقون ياولي الالبب}
 \eng{The Pilgrimage is in the four known months. So, whosoever decides to perform the Pilgrimage in them, then there shall be no sexual approach, nor vileness, nor quarreling in the Pilgrimage. Any good that you do, God is aware of it; and bring provisions for yourselves, though the best provision is awareness; and be conscientious of Me O you who possesses intelligence.*} &
 De bedevaart is in de bekende maanden. Wie zich daarin de verplichting van de bedevaart oplegt, moet zich tijdens de bedevaart van geslachtsverkeer, schandelijkheid en twist onthouden. Wat voor goeds jullie doen dat weet God. En neemt proviand mee, maar de beste proviand is godvrezendheid. Vreest Mij, o verstandigen. &
@@ -1167,7 +1183,7 @@ En wanneer tot hem wordt gezegd: ''Vreest Allah,'' dan maakt de trots op zijn zo
 \ara{2:207}{ومن الناس من يشري نفسه ابتغا مرضات الله والله روف بالعباد}
 \eng{Among the people is he who dedicates his person by seeking God's favors; God is Kind to His servants.} &
 Onder de mensen is er ook hij die zichzelf verkoopt in zijn streven naar Gods tevredenheid. En God is vol mededogen voor de dienaren. &
-En er is er een onder de mensen die zichzelf verkoopt, het welbehagen van Allah zoekend. En Allah is Meest Genadig voor de dieneren. \\
+En er is er een onder de mensen die zichzelf verkoopt, het welbehagen van Allah zoekend. En Allah is Meest Genadig voor de dienaren. \\
 \ara{2:208}{يايها الذين امنوا ادخلوا في السلم كافه ولا تتبعوا خطوت الشيطن انه لكم عدو مبين}
 \eng{O you who acknowledge, join in peace, all of you, and do not follow the footsteps of the devil. He is to you a clear enemy.} &
 Jullie die geloven! Treedt allen tezamen toe tot de overgave [aan God] en volgt de voetstappen van de satan niet, want hij is een verklaarde vijand van jullie. &
@@ -1183,7 +1199,7 @@ Wat zij afwachten, is niets anders dan dat (de bestraffing van) Allah tot hen ko
 \ara{2:211}{سل بني اسريل كم اتينهم من ايه بينه ومن يبدل نعمه الله من بعد ما جاته فان الله شديد العقاب}
 \eng{Ask the Children of Israel how many clear signs We gave them. Whoever changes God's favor after it has come to him, then God is Mighty in retribution.*} &
 Vraagt de Israëlieten hoeveel duidelijke tekenen Wij hun gegeven hebben. Maar als iemand Gods genade verandert, nadat die tot hem is gekomen, dan is God streng in de afstraffing. &
-Vraag aan de Kinderen van Israel hoeveel duidelijke bewijzen Wij hun hebben gegeven. En wie de genieting van Allah vervangt nadat deze tot hem is gekomen: voorwaar, Allah is hard in de bestraffing. \\
+Vraag aan de Kinderen van Israël hoeveel duidelijke bewijzen Wij hun hebben gegeven. En wie de genieting van Allah vervangt nadat deze tot hem is gekomen: voorwaar, Allah is hard in de bestraffing. \\
 \ara{2:212}{زين للذين كفروا الحيوه الدنيا ويسخرون من الذين امنوا والذين اتقوا فوقهم يوم القيمه والله يرزق من يشا بغير حساب}
 \eng{This lowly/worldly life has been made pleasing to the ingrates, and they mock those who acknowledge. Those who are aware will be above them on the day of Resurrection; God provides for whomever He wishes without counting.} &
 Het tegenwoordige leven is voor hen die ongelovig zijn aantrekkelijk gemaakt en zij maken hen die geloven belachelijk. Maar zij die godvrezend zijn staan op de opstandingsdag boven hen. God geeft levensonderhoud aan wie Hij wil, zonder afrekening. &
@@ -1191,15 +1207,15 @@ Voor degenen die ongelovig zijn, is het wereldse leven schoonschijnend gemaakt e
 \ara{2:213}{كان الناس امه وحده فبعث الله النبين مبشرين ومنذرين وانزل معهم الكتب بالحق ليحكم بين الناس فيما اختلفوا فيه وما اختلف فيه الا الذين اوتوه من بعد ما جاتهم البينت بغيا بينهم فهدي الله الذين امنوا لما اختلفوا فيه من الحق باذنه والله يهدي من يشا الي صرط مستقيم}
 \eng{The people used to be one nation, then God sent the prophets as bearers of good news and as warners, and He sent down with them the book with the facts so that they may judge between the people in what they were disputing. But after receiving the proof, the people disputed in it due to animosity between them. God guided those who acknowledged with His permission regarding what they disputed in of the truth. God guides whoever/whomever (He) wishes to a straight path.*} &
 De mensen waren [oorspronkelijk] één gemeenschap. Vervolgens zond God de profeten als verkondigers van de blijde boodschap en als waarschuwers. [Telkens] zond Hij met hen het boek met de waarheid neer om tussen de mensen te oordelen over de dingen waarover zij het oneens waren. Maar degenen aan wie het gegeven was werden het er slechts uit onderlinge nijd over oneens, nadat de duidelijke bewijzen tot hen gekomen waren. Daarop heeft God in Zijn goedheid hen die geloven geleid tot de waarheid, waarover zij het oneens waren. God leidt wie Hij wil op een juiste weg. &
-De mensheid was een godsdienst (toegedaan, maar er ontstond oneningheid) waarop Allah de Profeten zond als verkondigers van verheugende tijdingen en als waarschuwers. En Hij zond met hen de Schrift neer met de Waarheid om te oordelen tussen de mensen over hetgeen waarover zij van mening verschilden. En niemand verschilde van mening daarover dan degenen aan wie het gegeven was, nadat de duidelijke bewijzen tot hen waren gekomen, uit onderlinge afgunst. Allah leidde degenen die geloven met de Waarheid, met Zijn toestemming, (weg van degenen die) van mening verschilden. En Allah leidt wie Hij wil op een recht Pad. \\
+De mensheid was een godsdienst (toegedaan, maar er ontstond onenigheid) waarop Allah de Profeten zond als verkondigers van verheugende tijdingen en als waarschuwers. En Hij zond met hen de Schrift neer met de Waarheid om te oordelen tussen de mensen over hetgeen waarover zij van mening verschilden. En niemand verschilde van mening daarover dan degenen aan wie het gegeven was, nadat de duidelijke bewijzen tot hen waren gekomen, uit onderlinge afgunst. Allah leidde degenen die geloven met de Waarheid, met Zijn toestemming, (weg van degenen die) van mening verschilden. En Allah leidt wie Hij wil op een recht Pad. \\
 \ara{2:214}{ام حسبتم ان تدخلوا الجنه ولما ياتكم مثل الذين خلوا من قبلكم مستهم الباسا والضرا وزلزلوا حتي يقول الرسول والذين امنوا معه متي نصر الله الا ان نصر الله قريب}
 \eng{Or did you calculate that you would enter paradise, while the example of those who were before you came to you; they were stricken with adversity and hardship, and they were shaken until the messenger and those who acknowledged with him said, ''When is God's victory?'' Yes indeed, God's victory is near.} &
 Of rekenden jullie erop de tuin binnen te gaan, terwijl jullie nog niet iets dergelijks is overkomen als hun die voor jullie tijd zijn heengegaan? Tegenspoed en rampspoed trof hen en zij werden zozeer geschokt dat de gezant en zij die samen met hem geloofden zeiden: ''Wanneer komt Gods hulp?'' Zeker, Gods hulp is nabij. &
-Denken jullie dat jullie het Paradijs zulen binnengen, terwijl het gelijke dat tot degenen kwam die voor jullie zijn heengegaan, nog niet tot jullie is gekomen? Rampen en tegenspoed troggen hen en zij werden zó geschokt dat de Boodschapper en degenen die met hem geloofden, zeiden: ''Wanneer kompt de hulp van Allah?'' Weet: voorwaar, de hulp van Allah is nabij. \\
+Denken jullie dat jullie het Paradijs zullen binnengaan, terwijl het gelijke dat tot degenen kwam die voor jullie zijn heengegaan, nog niet tot jullie is gekomen? Rampen en tegenspoed troggen hen en zij werden zó geschokt dat de Boodschapper en degenen die met hem geloofden, zeiden: ''Wanneer komt de hulp van Allah?'' Weet: voorwaar, de hulp van Allah is nabij. \\
 \ara{2:215}{يسلونك ماذا ينفقون قل ما انفقتم من خير فللولدين والاقربين واليتمي والمسكين وابن السبيل وما تفعلوا من خير فان الله به عليم}
 \eng{They ask you what they should spend, say, ''What you spend out of goodness should go to your family and the relatives and the orphans, and the needy, and the wayfarer. Any good you do, God is fully aware of it.''} &
 Zij vragen jou wat zij als bijdragen zullen geven. Zeg: ''Laat het goede dat jullie als bijdragen geven zijn voor de ouders, de verwanten, de wezen, de behoeftigen en voor hem die onderweg is. Het goede dat jullie doen daarover is God wetend. &
-Zij vragen jou wat zij als bijdrage moeten geven. Zeg: ''Wat jullie aan goeds geven als bijdrage, is besternd voor de ouders en de verwanten en de wezen en de armen en de reiziger zonder proviand.'' En wat jullie aan goeds doen: voorwaar, Allah is daarover Alwetend. \\
+Zij vragen jou wat zij als bijdrage moeten geven. Zeg: ''Wat jullie aan goeds geven als bijdrage, is bestemd voor de ouders en de verwanten en de wezen en de armen en de reiziger zonder proviand.'' En wat jullie aan goeds doen: voorwaar, Allah is daarover Alwetend. \\
 \ara{2:216}{كتب عليكم القتال وهو كره لكم وعسي ان تكرهوا شيا وهو خير لكم وعسي ان تحبوا شيا وهو شر لكم والله يعلم وانتم لا تعلمون}
 \eng{Warfare has been decreed for you while you hate it; and perhaps you may hate something while it is good for you, and perhaps you may love something while it is bad for you; God knows while you do not know.} &
 Aan jullie is voorgeschreven te strijden, hoezeer het jullie ook tegenstaat. Maar misschien staat jullie iets tegen wat toch goed voor jullie is en misschien hebben jullie iets lief wat toch slecht is voor jullie. God weet en jullie weten niet. &
@@ -1207,15 +1223,15 @@ De strijd is jullie verplicht, terwijl jullie er een afkeer van hebben. Maar het
 \ara{2:217}{يسلونك عن الشهر الحرام قتال فيه قل قتال فيه كبير وصد عن سبيل الله وكفر به والمسجد الحرام واخراج اهله منه اكبر عند الله والفتنه اكبر من القتل ولا يزالون يقتلونكم حتي يردوكم عن دينكم ان استطعوا ومن يرتدد منكم عن دينه فيمت وهو كافر فاوليك حبطت اعملهم في الدنيا والاخره واوليك اصحب النار هم فيها خلدون}
 \eng{They ask you about fighting in the restricted month. Say, ''Fighting in it is great offense,'' yet repelling from the path of God and not appreciating Him and the Restricted Temple, driving its inhabitants out is far greater with God. Persecution is worse than being killed.'' They still will fight you until they turn you back from your system if they are able. Whoever of you turns back from his system, and dies as ingrates, then these have nullified their work in this life and the next; these are the people of the fire; there they will abide eternally!} &
 Zij vragen jou over de heilige maand, over het strijden erin. Zeg: ''Erin te strijden is een ernstige zaak, maar het versperren van Gods weg, het niet in Hem en de heilige moskee geloven en het verdrijven van de mensen die erbij horen gelden bij God als ernstiger. Verzoeking is ernstiger dan te doden. Zij zullen pas ophouden tegen jullie te strijden wanneer zij jullie van jullie godsdienst hebben afgebracht; als zij dat zouden kunnen. Wie van jullie zich van hun godsdienst afkeren en dan als ongelovigen sterven, dat zijn zij wier daden in het tegenwoordige leven en in het hiernamaals vruchteloos zijn. Zij zijn het die in het vuur thuis horen; zij zullen daarin altijd blijven. &
-Zij vragen jou over de strijd in de Gewijde maanden. Zeg (O Moehammad): ''De strijd daarin is een grote zonde. En het afhouden van het Pad van Allah en ongeloof aan Hem en het versperren van de teogang tot de Masdjid al Harãm'' (de Gewijde Moskee te Mekkah) en het verdrijven van de bewoners er omheen, (dit alles) is nog erger bij Allah. En Fitnah (hier: afgoderij) is erger dan het doden. En zij zullen niet ophouden jullie te bestrijden totdat zij jullie van jullie godsdienst hebben afgebracht en afvalligen hebben gamaakt, als zij dartoe in staat zouden zijn. En wie van julle afvallig is aan zijn godsdienst en dan sterft, terijl hij een ongelovige is, diegenen zijn het wier daden vruchteloos zijn, op aarde en het Hiernamaals, diegenen zijn de bewoners van de Hel. Zij zijn daarin eeuwig levenden. \\
+Zij vragen jou over de strijd in de Gewijde maanden. Zeg (O Moehammad): ''De strijd daarin is een grote zonde. En het afhouden van het Pad van Allah en ongeloof aan Hem en het versperren van de toegang tot de Masdjid al Harâm'' (de Gewijde Moskee te Mekkah) en het verdrijven van de bewoners er omheen, (dit alles) is nog erger bij Allah. En Fitnah (hier: afgoderij) is erger dan het doden. En zij zullen niet ophouden jullie te bestrijden totdat zij jullie van jullie godsdienst hebben afgebracht en afvalligen hebben gemaakt, als zij daartoe in staat zouden zijn. En wie van jullie afvallig is aan zijn godsdienst en dan sterft, terwijl hij een ongelovige is, diegenen zijn het wier daden vruchteloos zijn, op aarde en het Hiernamaals, diegenen zijn de bewoners van de Hel. Zij zijn daarin eeuwig levenden. \\
 \ara{2:218}{ان الذين امنوا والذين هاجروا وجهدوا في سبيل الله اوليك يرجون رحمت الله والله غفور رحيم}
 \eng{Those who have acknowledged, and those who have emigrated and strived in the cause of God; these are seeking God's compassion, and God is Forgiving, Compassionate.} &
 Zij die geloven en zij die uitgeweken zijn en zich op Gods weg inspannen, zij zijn het die op Gods barmhartigheid hopen. God is vergevend en barmhartig. &
-Voorwar, degenen die geloven en degenen die uitgeweken zijn en degenen die strijden op de Web van Allah, zij zijn degenen die hopen op de Barmhartigheid van Allah. En Allah is Vergevensgezind, Meest Barmhartig. \\
+Voorwaar, degenen die geloven en degenen die uitgeweken zijn en degenen die strijden op de Web van Allah, zij zijn degenen die hopen op de Barmhartigheid van Allah. En Allah is Vergevensgezind, Meest Barmhartig. \\
 \ara{2:219}{يسلونك عن الخمر والميسر قل فيهما اثم كبير ومنفع للناس واثمهما اكبر من نفعهما ويسلونك ماذا ينفقون قل العفو كذلك يبين الله لكم الايت لعلكم تتفكرون}
 \eng{They ask you about intoxicants and gambling. Say, ''In them is great harm, and a benefit for people; but their harm is greater than their benefit.'' They ask you how much are they to give, say, ''The excess.'' Thus, God clarifies for you the signs that you may think.*} &
 Zij vragen jou naar de wijn en het kansspel. Zeg: ''In beide is grote zonde en veel nuttigheid voor de mensen, maar hun zonde is groter dan hun nut.'' Zij vragen jou ook wat zij als bijdragen zullen geven. Zeg: ''Wat over is.'' Zo maakt God aan jullie de tekenen duidelijk. Misschien zullen jullie nadenken &
-Zij vragen jou over de wijn en het kansspel. Zeg: ''In beide is grote zonde en nut voor de mensen, maar de zonde in beide is groter dan hun nuit.'' En zij vragen jou wat zij aan bijdragen moeten geven. Zeg: ''Wat jullie kunnen missen.'' Zo maakt Hij voor jullie Zijn Tekenen duidelijk, hopelijk zullen jullie nadenken. \\
+Zij vragen jou over de wijn en het kansspel. Zeg: ''In beide is grote zonde en nut voor de mensen, maar de zonde in beide is groter dan hun buit.'' En zij vragen jou wat zij aan bijdragen moeten geven. Zeg: ''Wat jullie kunnen missen.'' Zo maakt Hij voor jullie Zijn Tekenen duidelijk, hopelijk zullen jullie nadenken. \\
 \ara{2:220}{في الدنيا والاخره ويسلونك عن اليتمي قل اصلاح لهم خير وان تخالطوهم فاخونكم والله يعلم المفسد من المصلح ولو شا الله لاعنتكم ان الله عزيز حكيم}
 \eng{In this world and the next. They also ask you regarding the orphans, say, ''To reform their situation is best, and if you are to care for them, then they are your brothers.'' God knows the corrupt from the reformer, and had God wished He could have made things difficult. God is Noble, Wise.} &
 over het tegenwoordige leven en het hiernamaals.  Zij vragen jou over de wezen. Zeg: ''Voor hen orde op zaken stellen is het beste.'' En als jullie met hen omgaan..., zij zijn toch jullie broeders! God onderscheidt de verderfbrenger van hem die herstel brengt. Als God wilde had Hij jullie in moeilijkheden gebracht. God is machtig en wijs. &
@@ -1287,7 +1303,7 @@ Er rust geen zonde op jullie wanneer jullie de vrouwen scheiding geven voordat j
 \ara{2:237}{وان طلقتموهن من قبل ان تمسوهن وقد فرضتم لهن فريضه فنصف ما فرضتم الا ان يعفون او يعفوا الذي بيده عقده النكاح وان تعفوا اقرب للتقوي ولا تنسوا الفضل بينكم ان الله بما تعملون بصير}
 \eng{If you divorce them before having sexual intercourse with them, but you have already agreed to the dowry, then you must give half of what you have agreed, unless they forgive or the guardian over the marriage contract forgives. If you forgive, it is closer to awareness. Do not forget the favor between you; God is Seer over what you do.} &
 En als jullie haar de scheiding geven voordat jullie haar hebben aangeraakt, maar voor haar al wel een verplichte bruidsgift hebt vastgesteld, dan wordt het de helft van wat jullie hebben vastgesteld, behalve als zij het kwijtscheldt of hij het kwijtscheldt onder wiens gezag de huwelijkssluiting valt. Het kwijtschelden is dichter bij godvrezendheid. En vergeet niet iets voor elkaar over te hebben. God doorziet wel wat jullie doen. &
-En wanneer jullie hun scheiding geven voor-dat jullie hen hebben aangeraakt en terwijl jullie voor hen een bruidschat hebben vastgesteld: (geeft dan) de helft van wat jullie hebben vastgesteld behalve wanneer zij kwijtschelding geven of degene in wiens hand de huwelijksvoltrekking rust. En dat jullie kwijtschelding geven is dichter bij Taqwa. En vergeet niet elkaars goede eigenschappen. Voorwaar, Allah is Alziende over wat jullie doen. \\
+En wanneer jullie hun scheiding geven voor dat jullie hen hebben aangeraakt en terwijl jullie voor hen een bruidschat hebben vastgesteld: (geeft dan) de helft van wat jullie hebben vastgesteld behalve wanneer zij kwijtschelding geven of degene in wiens hand de huwelijksvoltrekking rust. En dat jullie kwijtschelding geven is dichter bij Taqwa. En vergeet niet elkaars goede eigenschappen. Voorwaar, Allah is Alziende over wat jullie doen. \\
 \ara{2:238}{حفظوا علي الصلوت والصلوه الوسطي وقوموا لله قنتين}
 \eng{Preserve the contact prayers, and the middle contact prayer, and stand devoutly for God.*} &
 Houdt jullie aan de salaats en vooral aan de middelste salaat en staat onderdanig voor God. &
@@ -1484,7 +1500,7 @@ De Boodschapper gelooft in wat hem van zijn Heer is geopenbaard, en (ook) de gel
 \eng{God does not impose a person beyond its capacity. For it is what it earns, and against it is what it earns. ''Our Lord, do not mind us if we forget or make mistakes. Our Lord, do not place a burden upon us as You have placed upon those before us. Our Lord, do not burden us beyond our power; pardon us, and forgive us, and have compassion on us; You are our patron, help us against the ingrates.''*} &
 God legt niemand meer op dan hij kan dragen. Hem komt toe wat hij verdiend heeft en van hem wordt gevorderd wat hij heeft begaan. Onze Heer, reken het ons niet aan als wij vergeten of fouten maken. Onze Heer, leg ons niet een zware last op zoals U die aan hen hebt opgelegd die er voor onze tijd waren. Onze Heer, leg ons niet iets op waarvoor wij geen kracht hebben en schenk ons vergiffenis, vergeef ons en heb erbarmen met ons. U bent onze beschermheer, help ons dan tegen de ongelovige mensen. &
 Allah belast niemand dan volgens zijn vermogen. Voor hem is hetgeen (de beloning) dat hij doet en voor hem is hetgeen (de bestraffing) wat hij doet. (Zeg:) ''Onze Heer, bestraf ons niet als wij vergeten of als wij fouten maken. Onze Heer, belast ons niet zoals U degenen vóór ons belast heeft. Onze Heer belast ons niet met wat wij niet kunnen dragen en scheld ons kwijt en vergeef ons en wees ons genadig. U bent onze Meester en help ons tegen het ongelovige volk.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{3:1}{الم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -2289,7 +2305,7 @@ En voorwaar, er zijn er onder de Lieden van de Schrift die zeker in Allah gelove
 \eng{O you who acknowledge, be patient, call for patience, bond together, and be aware of God that you may succeed.*} &
 Jullie die geloven! Weest geduldig, volhardend, standvastig en vreest God. Misschien zal het jullie welgaan. &
 O jullie die geloven, weest geduldig, en weest standvastig, sluit de rijen en vreest Allah. Hopelijk zullen jullie welslagen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{4:1}{يايها الناس اتقوا ربكم الذي خلقكم من نفس وحده وخلق منها زوجها وبث منهما رجالا كثيرا ونسا واتقوا الله الذي تسالون به والارحام ان الله كان عليكم رقيبا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -2998,7 +3014,7 @@ En wat betreft degenen die in Allah geloven: houdt jullie aan Hem vast. Dan zal 
 \eng{They seek a ruling from you, say, ''God gives you the ruling for those who have no descendants. If a person passes away and has no children but has a sister, then she shall receive half of what he leaves behind. He will inherit her fully if she has no child. However, if he has two sisters, then they will receive two thirds of what he left behind; and if he has siblings, male and female, then the male shall receive twice what the female receives.'' God makes clear to you that you do not stray; God is aware of all things.} &
 Zij vragen jou om uitsluitsel. Zeg: ''God geeft jullie uitsluitsel over het erven in de zijlinie.'' Als iemand aan zijn einde komt zonder dat hij kinderen heeft, maar hij heeft een zuster, dan is voor haar de helft van wat hij nalaat. Hij erft ook van haar als zij geen kinderen heeft. Als zij met twee zusters zijn dan is voor haar tweederde van wat hij nalaat. En als er verscheidene broers en zusters zijn, dan komt de man het aandeel van twee vrouwen toe. God maakt het voor jullie duidelijk, opdat jullie niet dwalen. God is alwetend. &
 Zij vragen jou, zeg (O Moehammad): ''Allah geeft jullie een antwoord over de Kalâlah: indien een persoon overlijdt terwijl hij geen kind heeft en hij heeft (wel) een zuster: dan krijgt zij de helft van wat hij achterlaat. En hij erft (alles) in het geval dat zij (zijn zuster) geen kind heeft. En indien er twee (zusters) zijn, krijgen zij twee-derde van wat hij achterlaat. Maar indien er (van de overladen man) broeders en zusters (achterblijven), dan is er voor een man net zoveel als voor twee vrouwen.'' Allah heeft jullie dit duidelijk gemaakt, opdat jullie niet dwalen. En Allah is Alwetend over alle zaken. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{5:1}{يايها الذين امنوا اوفوا بالعقود احلت لكم بهيمه الانعم الا ما يتلي عليكم غير محلي الصيد وانتم حرم ان الله يحكم ما يريد}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -3483,7 +3499,7 @@ Allah zei: ''Dit is een Dag waarop hun waarachtigheid de waarachtigen zal baten;
 \eng{To God is the sovereignty of heavens, earth, and all that is in them; and He is capable of all things.} &
 God heeft de heerschappij over de hemelen en de aarde en wat erin is en Hij is almachtig. &
 Aan Allah behoort het Koninkrijk van de hemelen en de aarde en wat daarin is. En Hij is Almachtig over alle zaken. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{6:1}{الحمد لله الذي خلق السموت والارض وجعل الظلمت والنور ثم الذين كفروا بربهم يعدلون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -4148,7 +4164,7 @@ Zeg: ''Zal ik een andere Heer dan Allah zoeken, terwijl Hij de Heer van alle zak
 \eng{He is the One who made you successors on earth, and He raised some of you over others in grades, to test you with what He had given you. Your Lord is quick to punishment, and He is Forgiving, Compassionate.} &
 Hij is het die jullie op de aarde tot elkaar opvolgende geslachten gemaakt heeft en die sommigen van jullie hogere rangen dan anderen gegeven heeft om jullie op de proef te stellen in wat Hij jullie gegeven heeft. Jouw Heer is zeker snel met de afstraffing en Hij is werkelijk vergevend en barmhartig. &
 En Hij is het Die jullie heeft aangesteld als gevolmachtigden op de aarde, Hij heeft een deel van jullie in rangen verheven boven anderen, om jullie te beproeven met wat Hij jullie heeft gegeven. Voorwaar, jouw Heer is snel in de bestraffing, en voorwaar, Hij is zeker Vergevensgezind, Meest Bamhartig. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{7:1}{المص}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -4977,7 +4993,7 @@ En noem (de Namen van) jouw Heer in jezelf met nederigheid en vrees, en zonder l
 \eng{Those who are at your Lord, they are never too proud to serve Him, and they glorify Him, and to Him they prostrate.} &
 Zij die bij jouw Heer zijn zijn niet te trots om Hem te dienen; zij prijzen Hem en buigen zich eerbiedig voor Hem neer.? &
 Voorwaar, degenen die bij jouw Heer zijn (de Engelen), zijn niet te hoogmoedig voor de aanbidding van Hem, en zij prijzen Zijn Glorie en voor Hem werpen zij zich neer. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{8:1}{يسلونك عن الانفال قل الانفال لله والرسول فاتقوا الله واصلحوا ذات بينكم واطيعوا الله ورسوله ان كنتم مومنين}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -5145,7 +5161,7 @@ En ais zij zich afwenden, weet dan dat Allah waarlijk jullie Beschermer is. Hij 
 \ara{8:41}{واعلموا انما غنمتم من شي فان لله خمسه وللرسول ولذي القربي واليتمي والمسكين وابن السبيل ان كنتم امنتم بالله وما انزلنا علي عبدنا يوم الفرقان يوم التقي الجمعان والله علي كل شي قدير}
 \eng{You should know: ''Of anything you gain, that one-fifth shall go to God and the messenger: to the relatives, the orphans, the poor, and the wayfarer.'' You will do this if you acknowledge God and in what We revealed to Our servant on the day of distinction, the day the two armies clashed. God is able to do all things.*} &
 En weet, dat wanneer jullie iets buitmaken, dat dan aan God een vijfde deel toebehoort en aan de gezant, de verwanten, de wezen, de behoeftigen en hij die onderweg is, als jullie geloven in God en wat Wij tot Onze dienaar hebben neergezonden op de dag van het reddend onderscheidingsmiddel, de dag dat de beide troepenmachten tot een treffen kwamen; God is almachtig. &
-En weet dat, wat jullie ook aan oorlogsbuit (Ghanîmah) hebben verkregen: één vijfde deel ervan is voor Allah en voor de Boodschapper en voor de verwanten (van de Boodschapper), en de wezen, en de annen en de reiziger (zonder proviand), als jullie in Allah geloven en in wat Wij aan Onze dienaar hebben neergezonden op de dag van het onderscheid, de dag dat de twee legers elkaar troffen.En Allah is Almachtig over alle dingen. \\
+En weet dat, wat jullie ook aan oorlogsbuit (Ghanîmah) hebben verkregen: één vijfde deel ervan is voor Allah en voor de Boodschapper en voor de verwanten (van de Boodschapper), en de wezen, en de annen en de reiziger (zonder proviand), als jullie in Allah geloven en in wat Wij aan Onze dienaar hebben neergezonden op de dag van het onderscheid, de dag dat de twee legers elkaar troffen. En Allah is Almachtig over alle dingen. \\
 \ara{8:42}{اذ انتم بالعدوه الدنيا وهم بالعدوه القصوي والركب اسفل منكم ولو تواعدتم لاختلفتم في الميعد ولكن ليقضي الله امرا كان مفعولا ليهلك من هلك عن بينه ويحيي من حي عن بينه وان الله لسميع عليم}
 \eng{When you were on the near side, and they were on the far side, then the supply line became directly beneath you. Had you planned for this meeting, you would have disagreed on its timing, but God was to enforce a command that was already done. So that He would destroy those to be destroyed with proof, and to let those who will live be alive with proof. God is Hearer, Knowledgeable.} &
 Toen jullie op de dichtbijgelegen helling waren en zij op de verafgelegen helling en de ruiterij beneden jullie was! Als jullie het met elkaar afgesproken hadden, dan waren jullie de afspraak zeker niet nagekomen. Maar het gebeurde opdat God een beschikking zou treffen die volvoerd moest worden en opdat zij die zijn omgekomen zouden omkomen op grond van een duidelijk bewijs en opdat zij die in leven bleven in leven zouden blijven op grond van een duidelijk bewijs. God is echt horend en wetend. &
@@ -5282,7 +5298,7 @@ En degenen die geloven en zijn uitgeweken en hebben gestreden op de Weg van Alla
 \eng{Those who acknowledged afterwards and emigrated and strived with you, then they are from you. The relatives by birth are also supportive of one another in God's book. God is aware of all things.} &
 En zij die later gelovig zijn geworden en uitgeweken zijn en die zich samen met jullie inspannen, die behoren bij jullie. Maar de bloedverwanten hebben volgens Gods boek de nauwste band met elkaar. God is alwetend. &
 En degenen die daarna gelovig zijn geworden en zijn uitgeweken en samen rnet jullie hebben gestreden: zij zijn degenen die tot jullie behoren. En de bloedverwanten hebben voorrang boven de anderen in het Boek van Allah. Voorwaar, Allah is Alwetend over alle dingen. \\
-\midrule
+\midrule\nopagebreak
 \ara{9:1}{براه من الله ورسوله الي الذين عهدتم من المشركين}
 \eng{This is an ultimatum from God and His messenger to those who set up partners with whom you had entered a treaty.*} &
 Een opzegging door God en Zijn gezant aan hen onder de veelgodendienaars met wie jullie een verbond gesloten hebben. &
@@ -5462,7 +5478,7 @@ Degenen die in Allah en de Laatste Dag geloven zullen jou niet om vrijstelling v
 \ara{9:45}{انما يستذنك الذين لا يومنون بالله واليوم الاخر وارتابت قلوبهم فهم في ريبهم يترددون}
 \eng{Those who ask leave are the ones who do not acknowledge God and the Last day, and their hearts are in doubt. In their doubts they are wavering.*} &
 Slechts zij die niet in God en de laatste dag geloven vragen jou om ontheffing. En hun harten verkeren in twijfel; dus aarzelen zij in hun twijfel. &
-Voorwaar, degenen die niet in Allah en de I.aatste Dag geloven vragen jou om vrijstelling en (zij zijn degenen) wiens harten twijfelen waardoor zij in hun twijfel heen en weer geslingerd worden. \\
+Voorwaar, degenen die niet in Allah en de Laatste Dag geloven vragen jou om vrijstelling en (zij zijn degenen) wiens harten twijfelen waardoor zij in hun twijfel heen en weer geslingerd worden. \\
 \ara{9:46}{ولو ارادوا الخروج لاعدوا له عده ولكن كره الله انبعاثهم فثبطهم وقيل اقعدوا مع القعدين}
 \eng{If they had gone with you then they would have taken all preparation for it, but God disliked their being sent forth, so He hindered them, and they were told: ''Stay with those who have stayed.''} &
 En als zij wensten uit te trekken, dan hadden zij voorbereidingen getroffen, maar het stond God tegen dat zij optrokken, dus hield Hij hen tegen. En er werd gezegd: ''Blijft thuis met de thuisblijvers.'' &
@@ -5799,7 +5815,7 @@ Voorzeker, er is een Boodschapper tot jullie gekomen uit jullie eigen midden. Zw
 \eng{} &
 Maar als zij zich afkeren zeg dan: ''God is mij goed genoeg. Er is geen god dan Hij. Op Hem stel ik mijn vertrouwen en Hij is de Heer van de geweldige troon.'' &
 Als zij zich dan afwenden, zeg dan: ''Allah is mij voldoende, geen god is er dan Hij!, op Hem vertrouw ik, en Hij is de Heer van de Geweldige Troon.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{10:1}{الر تلك ايت الكتب الحكيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -6015,7 +6031,7 @@ Daarna zal tot degenen die onrecht pleegden worden gezegd: ''Proeft de eeuwige b
 \ara{10:53}{ويستنبونك احق هو قل اي وربي انه لحق وما انتم بمعجزين}
 \eng{They seek news from you: ''Is it true?'' Say, ''Yes, by my Lord it is true, and you cannot escape from it.''} &
 En zij zullen jou vragen om mee te delen of het waar is. Zeg: ''Ja, bij mijn Heer het is waar en jullie kunnen er niets tegen doen.'' &
-En zij vragen jou: ''Is het waar?'' Ze.g: ''Ja, bij mijn Heer: voorwaar, het is zeker de Waarheid, en jullie kunnen het niet ontvluchten.'' \\
+En zij vragen jou: ''Is het waar?'' Zeg: ''Ja, bij mijn Heer: voorwaar, het is zeker de Waarheid, en jullie kunnen het niet ontvluchten.'' \\
 \ara{10:54}{ولو ان لكل نفس ظلمت ما في الارض لافتدت به واسروا الندامه لما راوا العذاب وقضي بينهم بالقسط وهم لا يظلمون}
 \eng{If every person that wronged had possessed all that is on earth, it would have attempted to ransom it. They declared their regret when they saw the retribution, and it was judged between them with fairness. They are not wronged.} &
 En als iedereen die onrecht pleegde zou bezitten wat er op de aarde is, dan zou hij zich ermee willen vrijkopen. Heimelijk hebben zij dan spijt wanneer zij de bestraffing zien. En er wordt tussen hen met rechtvaardigheid beslist en hun wordt geen onrecht aangedaan. &
@@ -6240,7 +6256,7 @@ Zeg: ''O mensen, waarlijk, de Waarheid van jullie Heer is tot jullie gekomen. Wi
 \eng{Therefore, follow what is being inspired to you and be patient until God judges. He is the best of judges.} &
 En volg wat aan jou wordt geopenbaard en wees geduldig totdat God oordeelt, want Hij is de beste van hen die oordelen. &
 En volg wat ma jou is geopenbaard en wees geduldig totdat Allah oordeelt. En Hij is de Beste der Rechters. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{11:1}{الر كتب احكمت ايته ثم فصلت من لدن حكيم خبير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -6368,7 +6384,7 @@ En: ''O mijn volk, wie kan mij redden (van de bestraffing) van Allah, als ik hen
 \ara{11:31}{ولا اقول لكم عندي خزاين الله ولا اعلم الغيب ولا اقول اني ملك ولا اقول للذين تزدري اعينكم لن يوتيهم الله خيرا الله اعلم بما في انفسهم اني اذا لمن الظلمين}
 \eng{''Nor do I say to you that I have the treasures of God, nor do I know the future, nor do I say that I am an angel, nor do I say to those whom your eyes look down upon that God will not grant them any good. God is more aware of what is in them; in such case I would be among the wicked.''} &
 En ik zeg niet tot jullie dat ik Gods schatkamers bezit, noch ken ik het verborgene, ook zeg ik niet dat ik een engel ben, noch zeg ik tegen hen die in jullie ogen verachtelijk zijn dat God hun niets goeds zal geven. God weet het best wat in jullie binnenste is, anders zou ik tot de onrechtplegers behoren.'' &
-En ik zeg niet tot jullie: 'Ik bezit de schatten van Allah.? En ik ken het onwaarneembare niet. En ik zeg niet: 'Voorwaar, ik ben een Engel.' En ik zeg niet tot de-genen die verachtelijk zijn in jullie ogen: 'Allah zal jullie nimmer iets goeds geven.' Allah weet beter wat er in hen is. Voorwaar, den zou ik zeker tot de onrechtplegers behoren.'' \\
+En ik zeg niet tot jullie: 'Ik bezit de schatten van Allah.? En ik ken het onwaarneembare niet. En ik zeg niet: 'Voorwaar, ik ben een Engel.' En ik zeg niet tot degenen die verachtelijk zijn in jullie ogen: 'Allah zal jullie nimmer iets goeds geven.' Allah weet beter wat er in hen is. Voorwaar, den zou ik zeker tot de onrechtplegers behoren.'' \\
 \ara{11:32}{قالوا ينوح قد جدلتنا فاكثرت جدلنا فاتنا بما تعدنا ان كنت من الصدقين}
 \eng{They said, ''O Noah, you have argued with us, and continued arguing with us, so bring us what you promise us if you are of the truthful ones.''} &
 Zij zeiden: ''O Noeh, jij hebt met ons getwist, je hebt veel twist met ons gehad. Kom dan maar met wat je ons toegezegd hebt als je gelijk hebt.'' &
@@ -6737,7 +6753,7 @@ En wacht af, Voorwaar, (ook) wij zijn wachtenden.'' \\
 \eng{To God is the unseen of heavens and earth, and to Him all matters return. So serve Him and put your trust in Him. Your Lord is not unaware of what you all do.} &
 En van God is het verborgene van de hemelen en de aarde. Hem komt de gehele zeggenschap toe. Dien Hem dus en stel je vertrouwen op Hem. Jouw Heer let goed op wat jullie doen. &
 En aan Allah behoort het onwaarneembare van de hemelen en de aarde en tot Hem keren alle dingen terug. Aanbid daarom Hem en vertrouw op Hem en jouw Heer is niet onachtzaam omtrent wat jullie doen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{12:1}{الر تلك ايت الكتب المبين}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -7133,7 +7149,7 @@ Zij zeiden: ''O onze vader, vraag voor ons vergeving voor onze zonden. Voorwaar,
 \ara{12:98}{قال سوف استغفر لكم ربي انه هو الغفور الرحيم}
 \eng{He said, ''I will ask forgiveness for you from my Lord, He is the Forgiving, the Compassionate.''*} &
 Hij zei: ''Ik zal mijn Heer voor jullie om vergeving vragen; Hij is de vergevende, de barmhartige.'' &
-Hij (Ya'qôeb) zei: ''Ik zal mijn Heer vergeving voor jullie vragen. Voorwaar, Hij is de Vergevens-gezinde, de Meest Barmhartige.'' \\
+Hij (Ya'qôeb) zei: ''Ik zal mijn Heer vergeving voor jullie vragen. Voorwaar, Hij is de Vergevensgezinde, de Meest Barmhartige.'' \\
 \ara{12:99}{فلما دخلوا علي يوسف اوي اليه ابويه وقال ادخلوا مصر ان شا الله امنين}
 \eng{Then, when they entered upon Joseph, he took his parents to him and he said, ''Enter Egypt, God willing, in security.''} &
 Toen zij dan bij Joesoef binnenkwamen haalde hij zijn ouders bij zich en zei: ''Komt Egypte, zo God het wil, veilig binnen.'' &
@@ -7186,7 +7202,7 @@ Totdat de Boodschappers wanhoopten en dachten dat zij werden geloochend, toen kw
 \eng{In their stories is a lesson for the people of intelligence. It is not a hadith that was invented, but an authentication of what is already present, a detailing of all things, and a guidance and mercy to a people who acknowledge.*} &
 Zeker, in het verhaal over hen is een les voor de verstandigen; het is geen bericht dat verzonnen is, maar het is een bevestiging van wat er voordien al was en de uiteenzetting van alles en een leidraad en barmhartigheid voor mensen die geloven. &
 Voorzeker, cr is een lering in hun geschiedenissen voor de bezitters van verstand. Hij (de Koran) is geen verzonnen verhaal, maar is er als bevestiging van wat ervoor was, als een verduidelijking van alle dingen, als Leiding en als een Barmhartigheid voor een volk dat gelooft. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{13:1}{المر تلك ايت الكتب والذي انزل اليك من ربك الحق ولكن اكثر الناس لا يومنون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -7363,7 +7379,7 @@ En waarlijk, degenen voor hen beraamden (reeds) listen, maar Allah beheerst alle
 \eng{Those who reject say, ''You are not a messenger.'' Say, ''God is sufficient as a witness between me and you, the One who has the knowledge of the book.''} &
 En zij die ongelovig zijn zeggen: ''Jij bent geen gezondene.'' Zeg: ''God is goed genoeg als getuige tussen jullie en mij en wie kennis van het boek hebben.'' &
 En degenen die ongelovig zijn zeggen: jij bent geen gezondene. Zeg: ''Allah is genoeg als Getuige tussen mij en jullie en tussen de mensen die kennis hebben van de Schrift.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{14:1}{الر كتب انزلنه اليك لتخرج الناس من الظلمت الي النور باذن ربهم الي صرط العزيز الحميد}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -7576,7 +7592,7 @@ Zodat Allah elke ziel zal belonen voor wat zij heeft gedaan. Voorwaar, Allah is 
 \eng{This is a proclamation for the people and so that they are warned with it, and so that they know that there is but One god, and so that those with intelligence will remember.} &
 Dit is een verkondiging voor de mensen, opdat zij erdoor gewaarschuwd worden, opdat zij weten dat Hij één god is en opdat de verstandigen zich laten vermanen. &
 Dit is een Verkondiging voor de mensen, opdat zij daardoor gewaarschuwd zullen worden, en opdat zij weten dat Hij de Enige God is en opdat de bezitters van verstand de vermaningen ter harte zullen nemen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{15:1}{الر تلك ايت الكتب وقران مبين}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -7977,7 +7993,7 @@ Heilig daarom jouw Heer met een lofprijzing en behoor tot hen die zich neerkniel
 \eng{Serve your Lord until certainty comes to you.} &
 En dien jouw Heer tot de zekerheid [van de dood] komt. &
 En aanbid jouw Heer totdat het zekere (de dood) tot jou komt. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{16:1}{اتي امر الله فلا تستعجلوه سبحنه وتعلي عما يشركون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -8494,7 +8510,7 @@ En wees geduldig (O Moehammad) en jij bent slechts geduldig door Allah. En treur
 \eng{God is with those who are aware and are good doers.} &
 God is met hen die godvrezend zijn en hen die goed doen. &
 Voorwaar, Allah is niet degenen die (Hem) vrezen en met degenen die weldoeners zijn. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{17:1}{سبحن الذي اسري بعبده ليلا من المسجد الحرام الي المسجد الاقصا الذي بركنا حوله لنريه من ايتنا انه هو السميع البصير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -8598,7 +8614,7 @@ En wees zachtmoedig voor beiden, en nederig en liefdevol, en zeg: ''O mijn Heer,
 \ara{17:25}{ربكم اعلم بما في نفوسكم ان تكونوا صلحين فانه كان للاوبين غفورا}
 \eng{Your Lord is fully aware of what is in yourselves. If you are good, then He is to those who repent a Forgiver.} &
 Jullie Heer weet het best wat in jullie binnenste is; als jullie rechtschapen zijn, dan is Hij voor de schuldbewusten vergevend. &
-Jullie Heer weet beter wat er injullie zielen is, als jullie oprechte mensen zijn. Voorwaar; dan is Hij voor de berouwvollen Vergevensge-zind. \\
+Jullie Heer weet beter wat er injullie zielen is, als jullie oprechte mensen zijn. Voorwaar; dan is Hij voor de berouwvollen Vergevensgezind. \\
 \ara{17:26}{وات ذا القربي حقه والمسكين وابن السبيل ولا تبذر تبذيرا}
 \eng{Give the relative his due, and the poor, and the wayfarer; and do not waste excessively.} &
 En geef de verwant wat hem toekomt en ook de behoeftige en wie onderweg is en wees niet verspillend. &
@@ -8943,7 +8959,7 @@ Zeg: ''Roept Allah aan of roept de Barmhartige aan. Waarbij jullie Hem ook aanro
 \eng{Say, ''Praise is to God, who has not taken a son, nor does He have a partner in sovereignty, nor does He have an ally out of weakness.'' Glorify Him greatly.} &
 En zeg: ''Lof zij God die zich geen kind genomen heeft en die geen metgezel in de heerschappij heeft en die geen helper tegen de vernedering behoeft. En verheerlijk Zijn grootheid!'' &
 En zeg: ''Alle lof zij Allah. Degene die Zich geen kind neemt en Die voor Zich geen deelgenoot in het Koninkrijk heeft en Hij is niet vemederd, daarom heeft Hij geen helper (nodig). En verheerlijk Hem met een grote verkeerlijking.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{18:1}{الحمد لله الذي انزل علي عبده الكتب ولم يجعل له عوجا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -9388,7 +9404,7 @@ Zeg (O Moehammad): ''Al werd de zee inkt om de Woorden van mijn Heer (op te schr
 \eng{Say, ''I am but a human being like you, being inspired that your god is One god. So whoever looks forward to meeting his Lord, then let him do good works and not set up any partner in the service of his Lord.''} &
 Zeg: ''Ik ben slechts een mens als jullie; aan mij wordt geopenbaard dat jullie god één god is. Wie dan hoopt op de ontmoeting met zijn Heer, die moet deugdelijk handelen en in de eredienst van zijn Heer niet een als metgezel [aan Hem] toevoegen.'' &
 Zeg: ''Voorwaar, ik ben slechts een mens zoals jullie. Het is aan mij geopenbaard dat jullie god één God is. Wie daarom de ontmoeting met zijn Heer verwacht: laat hem goede daden verrichten en laat hem bij de aanbidding van zijn Heer niet één deelgenoot toekennen.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{19:1}{كهيعص}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -9785,7 +9801,7 @@ Voorwar, Wij hebben hem gemakkelijk in jouw taal (O Moehammad) gemaakt opdat jij
 \eng{How many a generation have We destroyed before them? Do you perceive any of them or hear from them a sound?} &
 En hoeveel generaties hebben Wij voor hun tijd reeds vernietigd! Word jij van een van hen nog iets gewaar of hoor jij van hen nog gefluister? &
 En hoeveel generaties vóór hen hebben Wij niet vernietigd? Zie jij ook maar één van hen of hoor je hun zacht gefluister? \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{20:1}{طه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -10161,7 +10177,7 @@ Hij (Môesa) zei: ''O Hârôen, wat hield jou tegen toen jij ben zag dwalen? \\
 \ara{20:93}{الا تتبعن افعصيت امري}
 \eng{''Do you not follow me? Have you disobeyed my command?''} &
 dat jij mij niet gevolgd bent? Was jij ongehoorzaam aan mijn bevel?'' &
-Om mij te volgen? Ben jij dan ongehoor-zaam aan mijn bevel geweest?'' \\
+Om mij te volgen? Ben jij dan ongehoorzaam aan mijn bevel geweest?'' \\
 \ara{20:94}{قال يبنوم لا تاخذ بلحيتي ولا براسي اني خشيت ان تقول فرقت بين بني اسريل ولم ترقب قولي}
 \eng{He said, ''O son of my mother, do not grab me by my beard nor by my head. I feared that you would say that I separated between the Children of Israel, and that I did not follow your orders.''} &
 Hij zei: ''Zoon van mijn moeder, grijp mij niet bij mijn baard en bij mijn hoofd. Ik vreesde dat jij zou zeggen: 'Jij hebt de Israëlieten opgesplitst en je niet gehouden aan wat ik zei.?'' &
@@ -10330,7 +10346,7 @@ En als Wij hen vernietigd hadden door een bestraffing voor hem (de Koran), dan z
 \eng{Say, ''All are waiting, so wait, and you will come to know who the people upon the even path are and who are guided.''} &
 Zeg: ''Iedereen wacht af; wacht dus maar af. Dan zullen jullie weten wie de mensen van de effen weg zijn en wie het goede pad volgen.'' &
 Zeg: ''Allen wachten af, wacht dus af. Jullie zullen te weten komen wie de volgers van het rechte Pad zijn en wie Leiding volgden.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{21:1}{اقترب للناس حسابهم وهم في غفله معرضون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -10783,7 +10799,7 @@ En ik wed niet of dit een beproeving voor jullie is en een tijdelijk genot.'' \\
 \eng{Say, ''My Lord, judge with truth. Our Lord, the Gracious, is sought for what you describe.''*} &
 Hij zegt: ''Mijn Heer, oordeel naar waarheid. En onze Heer is de Erbarmer wiens hulp gevraagd wordt tegen wat jullie beschrijven.'' &
 Zeg: ''Mijn Heer, oordeel naar de Waarheid. En onze Heer, de Barmhartige, is Degene wiens hulp gevraagd wordt tegen wat jullie (Hem) toeschrijven.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{22:1}{يايها الناس اتقوا ربكم ان زلزله الساعه شي عظيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -11100,7 +11116,7 @@ O jullie die geloven: buigt en knielt en aanbidt jullie Heer en doet het goede. 
 \eng{Strive in the cause of God properly. He is the One who has chosen you, and He has made no hardship for you in the system, the creed of your father Abraham; He is the One who named you 'those who have peacefully surrendered' from before as well as in this. So let the messenger be witness over you and you be witness over people. So hold the contact prayer and contribute towards betterment and hold tight to God, He is your patron. What an excellent Patron, and what an excellent Supporter.*} &
 En zet jullie voor God in met de inzet die Hem toekomt. Hij heeft jullie verkozen en Hij heeft jullie in de godsdienst niets hinderlijks opgelegd: het geloof van jullie vader Ibrahiem. Hij heeft jullie vroeger al [mensen] die zich [aan God] overgegeven hebben genoemd en [nu] ook hierin, opdat de gezant getuige voor jullie zou zijn en opdat jullie getuigen voor de mensen zouden zijn. Verricht dus de salaat en geeft de zakaat en houdt jullie aan God vast. Hij is jullie beschermheer; een voortreffelijke beschermheer en een voortreffelijke helper. &
 En streeft naar Allah volgens het streven waar Hij rechtop heeft. Hij heeft jullie uitgekozen en Hij heeft het jullie in de godsdienst niet moeilijk gemaakt: (volgt) de godsdienst van jullie vader Ibrâhîm. Hij is degene die jullie Moslims genoemd heeft, vroeger en hierin (de Koran): opdat de Boodschapper getuige is voor jullie en opdat jullie getuigen zijn voor de mensen. Onderhoudt dus de shalât en geeft de zakât en houdt jullie vast ma Allah, Hij is jullie Meester: de beste Meester en de beste Helper! \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{23:1}{قد افلح المومنون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -11577,7 +11593,7 @@ En wie een andere god aanroept naast Allah, waarvoor hij geen bewijs heeft: voor
 \eng{Say, ''My Lord, forgive and have mercy, and you are the best of those who are merciful.''} &
 En zeg: ''Mijn Heer, vergeef mij en heb erbarmen; U bent de beste van de barmhartigen.'' &
 En zeg: ''Vergeef en begenadig, en U bent de Beste van de Bamhartigen.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{24:1}{سوره انزلنها وفرضنها وانزلنا فيها ايت بينت لعلكم تذكرون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -11838,7 +11854,7 @@ Maakt de (manier van) aanspreken van de Boodschapper onder jullie niet als de aa
 \eng{Certainly, to God belongs all that is in the heavens and the earth. Surely, He knows what your condition is; and on the day when they are returned to Him, He will inform them of everything they had done. God is aware of all things.} &
 Zeker, van God is wat er in de hemelen en op de aarde is, Hij kent de toestand waarin jullie verkeren en op de dag dat zij tot Hem teruggebracht worden, dan zal Hij hun meedelen wat zij deden; God is alwetend. &
 Weet: voorwaar, aan Allah behoort wat in de hemelen is en op de aarde. Waarlijk, Hij kent de toestand waarin jullie je bevinden. En op de dag dat zij tot Hem teruggekeerd worden, zal Hij hen vertellen wat zij deden. En Allah is Alwetend over alle zaken. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{25:1}{تبارك الذي نزل الفرقان علي عبده ليكون للعلمين نذيرا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -12078,7 +12094,7 @@ En vertrouw op de Levende, Die niet sterft en prijs Zijn lof. En Hij is voldoend
 \ara{25:59}{الذي خلق السموت والارض وما بينهما في سته ايام ثم استوي علي العرش الرحمن فسل به خبيرا}
 \eng{The One who created the heavens and the earth and what is between them in six days, then He settled to the throne. The Gracious; so ask Him for He is Ever-aware.*} &
 Hij die de hemelen en de aarde en wat er tussen beide is in zes dagen geschapen heeft en die zich toen op de troon vestigde, hij is de Erbarmer. Vraag maar aan iemand die welingelicht is. &
-Diegene Die de hemel en de aarde en alles wat daartussen is geschapen heeft in zes dagen.Vervolgens zetelde Hij zich op de Troon, Hij is de Erbarmer, vraag over Hem aan degene die daarover het meeste weet. \\
+Diegene Die de hemel en de aarde en alles wat daartussen is geschapen heeft in zes dagen. Vervolgens zetelde Hij zich op de Troon, Hij is de Erbarmer, vraag over Hem aan degene die daarover het meeste weet. \\
 \ara{25:60}{واذا قيل لهم اسجدوا للرحمن قالوا وما الرحمن انسجد لما تامرنا وزادهم نفورا}
 \eng{If they are told: ''Prostrate to the Gracious.'' They say, ''What is the Gracious? Shall we prostrate to what you order us?'' It increases their aversion.*} &
 Wanneer men tot hen zegt: ''Buigt jullie eerbiedig neer voor de Erbarmer'' dan zeggen zij: ''Wat is dat, de Erbarmer? Zullen wij ons eerbiedig voor iets neerbuigen, alleen maar omdat jij het ons beveelt?'' En het vermeerdert slechts hun afkerigheid.'' &
@@ -12151,7 +12167,7 @@ Zij leven daarin eeuwig, een goede vestiging en verblijfplaats. \\
 \eng{Say, ''My Lord would not care about you except for your imploring. But you have denied, so it will be your destiny.''} &
 Zeg: ''Mijn Heer zal zich niet om jullie bekommeren als jullie Hem niet aanroepen, maar jullie hebben het toch geloochend, dus zal het onafwendbaar zijn.'' &
 Zeg: ''Mijn Heer zal zich niet om jullie bekommeren, indien jullie Hem niet aanroepen; waarlijk, jullie hebben (Hem) geloochend, dus is er spoedig de onvermijdbare (bestraffing).'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{26:1}{طسم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -13064,7 +13080,7 @@ En dat zij zeker zeggen wat zij niet doen? \\
 \eng{Except for those who acknowledge, and do good works, and remember God greatly, and were victorious after they were wronged. As for those who did wrong, they will know which fate they will meet.} &
 Maar niet zij die geloven, de deugdelijke daden doen en God veelvuldig gedenken en die zich verweren nadat hun onrecht is aangedaan. En zij die onrecht plegen zullen te weten komen wat voor omkeer zij zullen meemaken. &
 Behalve degenen die geloven en goede daden verrichten en Allah vaak gedenken. En zij overwinnen nadat hun onrecht is aangedaan. En degenen die onrecht pleegden zullen spoedig weten tot welke plaats van terugkeer zij zullen terugkeren! \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{27:1}{طس تلك ايت القران وكتاب مبين}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -13441,7 +13457,7 @@ En de Koren voor te dragen. Hij die dan de Leiding volgt, volgt die voor zichzel
 \eng{Say, ''Praise be to God, He will show you His signs and you will know them. Your Lord is not unaware of what you do.''*} &
 En zeg: ''Lof zij God, Hij zal jullie Zijn tekenen laten zien zodat jullie ze zullen kennen. En God let goed op wat jullie doen.'' &
 En zeg: ''Alle lof zij Allah. Hij zal jullie Zijn Tekenen laten zien en jullie zullen ze herkennen.'' En jouw Heer is niet onachtzaam omtrent wat jullie doen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{28:1}{طسم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -13798,7 +13814,7 @@ En laat jou niet weghouden van de Verzen van Allah nadat zij tot jou neergezonde
 \eng{Do not call besides God any god, there is no god but He. Everything will fade away except His presence. To Him is the judgment, and to Him you will be returned.} &
 Roep dus naast God geen andere god aan. Er is geen god dan Hij. Alles gaat teniet, maar Zijn aangezicht niet. Hem komt het oordeel toe en tot Hem worden jullie teruggebracht. &
 En roep geen andere god aan naad Allah. Er is geen god dan Hij. Alle dingen zullen vergaan, behalve Allah. Aan Hem is het oordeel en tot Ham worden jullie teruggebracht. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{29:1}{الم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -14079,7 +14095,7 @@ En wie is er onrechtvaardiger dan wie er een leugen over Allah verzint of de Waa
 \eng{As for those who strive in Our cause, We will guide them to Our paths. For God is with the pious.} &
 En hen die zich voor Ons inzetten zullen Wij op Onze wegen leiden. God is met hen die goed doen. &
 En degenen die omwille van Ons streven, die zullen Wij zeker Leiding schenken op Onze wegen. En voorwaar, Allah is zeker met de weldoeners. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{30:1}{الم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -14324,7 +14340,7 @@ Zo vergrendelt Allah de harten van degenen die niet weten. \\
 \eng{So be patient, for God's promise is true, and do not be dissuaded by those who do not have certainty.} &
 Volhard dus geduldig; Gods toezegging is waar. En zij die geen vaste overtuiging hebben, kunnen jou niet aan het weifelen brengen. &
 Wees daarom geduldig: voorwaar, de belofte van Allah is waar. En wordt niet verontrust door degenen die niet (door jou) overtuigd zijn. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{31:1}{الم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -14465,7 +14481,7 @@ O mensen, vreest jullie Heer en weest bevreesd voor een Dag waarop een vader zij
 \eng{With God is the knowledge regarding the moment. He sends down the rain, and He knows what is inside the wombs. No person knows what it may gain tomorrow, nor does any person know in which land it will die. God is Knowledgeable, Ever-aware.*} &
 God, bij Hem is de kennis van het uur, Hij laat de regen neerdalen en Hij weet wat er in de moederschoten is. Niemand weet wat hij morgen ten uitvoer zal brengen en niemand weet in welk land hij zal sterven. God is wetend en welingelicht. &
 Voorwaar, Allah beschikt over de kennis van het Uur, en Hij zendt de regen neer, en Hij kent wat zich in de schoten bevindt. En niemand weet wat hij morgen zal doen. En niemand weet op welke grond hij zal sterven. Voorwaar, Allah is van alles op de hoogte, Alwetend. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{32:1}{الم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -14590,7 +14606,7 @@ Zeg: ''Op de Dag van de overwinning zal het geloof van degenen die ongelovig war
 \eng{Therefore, turn away from them and wait, for they too are waiting.} &
 Wend je dus van hen af en wacht af. Zij wachten ook af. &
 Wend je daarom van hen af en wacht af: voorwaar, zij zijn afwachtenden. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{33:1}{يايها النبي اتق الله ولا تطع الكفرين والمنفقين ان الله كان عليما حكيما}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -14887,7 +14903,7 @@ Voorvaar, Wij hebben de Amânah (godsdienstige plichten) aan de hemelen en de aa
 \eng{So that God may punish the hypocrite men and the hypocrite women, and the men who set up partners and the women who set up partners. God redeems the acknowledging men and the acknowledging women. God is Forgiver, Compassionate.*} &
 opdat God de huichelaars en de huichelaarsters, de veelgodendienaars en -dienaressen zal bestraffen en opdat God zich genadig tot de gelovige mannen en vrouwen wendt; God is vergevend en barmhartig. &
 (De Amânah werd hen aangeboden) opdat Allah de huichelaars en de huichelaarsters en de veelgodenaanbidders en de veelgodenaanbidsters zal bestraffen. En Allah aanvaardt het berouw van de gelovige mannen en de gelovige vrouwen. En Allah is Vergevensgezind en Meest Barmhartig \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{34:1}{الحمد لله الذي له ما في السموت وما في الارض وله الحمد في الاخره وهو الحكيم الخبير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -15108,7 +15124,7 @@ En terwijl zij liem daarvóór waarlijk verwierpen. En zij gissen naar het onwaa
 \eng{They will be separated from what they had desired, as was done for their counterparts before. They have been in grave doubt.} &
 En wat zij begeren wordt voor hen onbereikbaar gemaakt zoals dat vroeger met hun soortgenoten gedaan was; zij verkeerden immers in hevige twijfel. &
 En tussen hen en wat zij verlangen is een belemmering gemakt, zoals dat bij hun (soortgelijke) volkeren van vroeger is gedaan. Voorwaar, zij verkeerden in vergaande twijfel. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{35:1}{الحمد لله فاطر السموت والارض جاعل المليكه رسلا اولي اجنحه مثني وثلث وربع يزيد في الخلق ما يشا ان الله علي كل شي قدير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -15293,7 +15309,7 @@ En reizen zij niet op aarde en zien zij niet hoe het einde was van degenen vóó
 \eng{If God were to punish the people for what they have earned, He would not leave a single creature standing. But He delays them to a predetermined time. Then, when their time comes, then God is Seer of His servants.} &
 Als God de mensen zou aanrekenen wat zij begaan hebben zou Hij op het aardoppervlak geen dier overlaten. Maar Hij geeft hun uitstel tot een vastgestelde termijn. En wanneer hun termijn komt, dan doorziet God Zijn dienaren. &
 En als Allah de mensen zou grijpen wegens wat zij bedreven hebben, dan zott Hij geen levend wezen op het aardoppervlak achterlaten. Maar Hij geeft hun uitstel tot een vastgeswide tijd. En wanneer hun tijd is gekomen (worden zij bestraft): voorwaar, Allah is Alziend over Zijn dienaren. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{36:1}{يس}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -15630,7 +15646,7 @@ Voorwaar, wanneer Hij iets wil (scheppen), dan zegt hij er slechts tegen: ''Wees
 \eng{Therefore, praise be to the One in whose Hand is the sovereignty of all things, and to Him you will be returned.} &
 Geprezen zij dus Hij in wiens hand de heerschappij over alles is en tot wie jullie worden teruggebracht. &
 Heilig is Degene in Wiens Hand de heerschappij over alle zaken is en tot Hem worden jullie teruggekeerd. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{37:1}{والصفت صفا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -16363,7 +16379,7 @@ En vrede zij met de gezondenen. \\
 \eng{Praise be to God, Lord of the worlds.} &
 En lof zij God, de Heer van de wereldbewoners. &
 En alle lof zij Allah, de Heer der Werelden. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{38:1}{ص والقران ذي الذكر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -16523,7 +16539,7 @@ En andere (Satans) vastgebonden in ketenen. \\
 \ara{38:39}{هذا عطاونا فامنن او امسك بغير حساب}
 \eng{''This is Our gift, so you may spend or withhold, without any repercussions.''} &
 ''Dit is Onze gave, geef overvloedig of terughoudend, zonder af te rekenen. &
-Dat is een ge-schenk van Ons, geef (het) dan weg of houd (het) achter; zonder afrekening. \\
+Dat is een geschenk van Ons, geef (het) dan weg of houd (het) achter; zonder afrekening. \\
 \ara{38:40}{وان له عندنا لزلفي وحسن ماب}
 \eng{He has deserved a near position with Us, and a wonderful abode.} &
 Hij staat Ons na en heeft een goede terugkomst.'' &
@@ -16720,7 +16736,7 @@ Hij (de Koran) is niets dan een Vermaning voor de werelden. \\
 \eng{''You will come to know its news after awhile.''} &
 En jullie zullen over een tijd de mededeling daarover kennen.'' &
 En over een tijd zullen jullie zeker weten wat zijn boodschap was.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{39:1}{تنزيل الكتب من الله العزيز الحكيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -16888,7 +16904,7 @@ Tot wie een bestraffing komt: die zal door hem vemederd worden, en een blijvende
 \ara{39:41}{انا انزلنا عليك الكتب للناس بالحق فمن اهتدي فلنفسه ومن ضل فانما يضل عليها وما انت عليهم بوكيل}
 \eng{We have sent down to you the book for the people with truth. Then, whoever is guided is guided for himself, and whoever goes astray goes astray to his own loss. You are not a keeper over them.} &
 Wij hebben tot jou het boek voor de mensen met de waarheid neergezonden. Wie zich de goede richting laat wijzen volgt het goede pad slechts tot zijn eigen voordeel en wie dwaalt, dwaalt slechts ten koste van zichzelf. En jij bent geen voogd over hen. &
-Voorwaar, Wij hebben in Waarheid het Boek aan jou gezonden.Wie dan de Leiding aanvandt; het is ten gunste van zichzelf; maar wie dwaalt; hij benadeelt slechts zichzelf. En jij (O Moehammad) bent geen verantwoordelijke over hen. \\
+Voorwaar, Wij hebben in Waarheid het Boek aan jou gezonden. Wie dan de Leiding aanvandt; het is ten gunste van zichzelf; maar wie dwaalt; hij benadeelt slechts zichzelf. En jij (O Moehammad) bent geen verantwoordelijke over hen. \\
 \ara{39:42}{الله يتوفي الانفس حين موتها والتي لم تمت في منامها فيمسك التي قضي عليها الموت ويرسل الاخري الي اجل مسمي ان في ذلك لايت لقوم يتفكرون}
 \eng{God takes the person when it dies, and during their sleep. He then keeps those that have been overtaken by death, and He sends the others back until a predetermined time. In that are signs for a people who will think.} &
 God neemt de zielen weg op de tijd van hun dood en in hun slaap, als ze nog niet gestorven zijn. Dan houdt Hij die waarvoor de dood beslist is tegen en zendt de andere voor een bepaalde termijn weer weg. Daarin zijn tekenen voor mensen die nadenken. &
@@ -17025,7 +17041,7 @@ En zij zullen zeggen: ''Alle lof zij Allah Die Zijn belofte aan ons heeft vervul
 \eng{You will see the angels surrounding the center of control, glorifying the praise of their Lord. It will be judged between them with truth, and it will be said, ''Praise be to God, Lord of the worlds''} &
 En je ziet de engelen rondom de troon staan terwijl zij de lof van hun Heer prijzen. En er wordt tussen hen naar waarheid beslist en men zegt: ''Lof zij God, de Heer van de wereldbewoners.'' &
 En jij (O Moehammad) zal de Engelen zien rondgaan om de Troon, de Glorie van hun heer lofprijzend met de lofprijzing die Hem toekomt. En er zal in Waarheid tussen hen worden beslist en er zal gezegd worden: ''Alle lof zij de Heer der Werelden.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{40:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -17370,7 +17386,7 @@ En toen zij Onze straf zagen, zeiden zij: ''Wij geloven in Allah, de Énige. En 
 \eng{But their acknowledgement could not help them once they saw Our might. Such is God's sunna that has been established with His servants. The ingrates were then totally in loss.} &
 Maar zij hadden geen nut van hun geloof toen zij Ons geweld zagen. Het was Gods gebruikelijke behandeling die reeds eerder te midden van Zijn dienaren had plaatsgevonden. Daar hadden de ongelovigen dus verloren. &
 Maar hun geloof baatte hun niet toen zij Onze bestraffing zagen. Dat is de handelwijze van Allah, die reeds voor Zijn dienaren was. En de ongelovigen verloren toen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{41:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -17591,7 +17607,7 @@ Wij zullen hun Onze Tekenen laten zien, aan de horizonten en in jullie zelf, tot
 \eng{Indeed, they are in doubt about meeting their Lord; but He is Encompassing over all things.} &
 Toch verkeren zij in twijfel over de ontmoeting met hun Heer en toch omvat Hij alles. &
 Weet: voorwaar, zij verkeren in twijfel over de ontmoeting met hun Heer. Weet: voorwaar, Hij omvat alle zaken. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{42:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -17808,7 +17824,7 @@ Zó hebben Wij aan jou een openbaring neergezonden, een zaak van Ons. Jij wist t
 \eng{The path of God; to Him belongs what is in the heavens and what is in the earth. Ultimately, all matters revert to God.} &
 naar de weg van God, van wie is wat er in de hemelen en wat er op de aarde is. Zeker, aan God worden uiteindelijk alle zaken voorgelegd. &
 Het is het Pad van Allah, Degene aan Wie alles wat in de hemelen en op de aarde is toebehoort. Weet: alle zaken keren tot Allah terug. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{43:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -18169,7 +18185,7 @@ En (Allah kent) zijn (Moehammad's) woorden: ''O mijn Heer, voorwaar, zij zijn ee
 \eng{So disregard them and say, ''Peace.'' For they will come to know.} &
 Schenk maar geen aandacht aan hen en zeg: ''Vrede''. Zij zullen het weten! &
 Verdraag hen maar, en zeg: ''Vaarwel!'' Zij zullen het weten. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{44:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -18410,7 +18426,7 @@ Voorwaar, Wij hebben hem (de Koran) gemakkelijk gemaakt in jouw taal. Hopelijk z
 \eng{Therefore, keep watch; for they too will keep watch.} &
 Wacht dus af; zij wachten ook af. &
 Wacht daarom: voorwaar, zij wachten (op hun bestraffing). \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{45:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -18563,7 +18579,7 @@ Alle lof zij Allah, de Heer van de hemelen en de Heer van de aarde, de Heer der 
 \eng{To Him belongs all majesty in the heavens and the earth. He is the Noble, the Wise.} &
 En Hij heeft de hoogste macht in de hemelen en op de aarde en Hij is de machtige, de wijze. &
 En Hem behoort alle grootheid in de hemelen en op de aarde, en Hij is de Almachtige, de Alwijze. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{46:1}{حم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -18708,7 +18724,7 @@ En (gedenkt) de Dag dat degenen die niet geloofden voor de Hel geplaatst zullen 
 \eng{Therefore, be patient like the messengers of strong-will did before you and do not be in haste regarding them. On the day they will see what they have been promised; it will be as if they had not remained except for one moment of a single day. A proclamation: ''Are any destroyed except for the wicked people?''} &
 Volhard dus geduldig zoals die profeten die vastbesloten waren geduldig volhardden en probeer niet het voor hen te verhaasten. Het zal voor hen op de dag dat zij zien wat hun toegezegd was zijn alsof het voor hen niet langer dan een uur van de dag heeft geduurd. [Dit is] een verkondiging. Zullen dan anderen dan de verdorven mensen vernietigd worden? &
 Wees daarom geduldig, zoals de bezitters van standvastigheid (Oeloel'azmi) onder de Boodschappers geduldig waren. En vraag niet om (de bestraffing) voor hen te bespoedigen. Het zal op de Dag, waarop zij zien wat hun aangezegd was, voor hen zijn alsof zij slechts een uur van de dag (op aarde) verbleven. Dit is een vermaning. Er wordt dan (niemand) vernietigd dan het zwaar zondige volk. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{47:1}{الذين كفروا وصدوا عن سبيل الله اضل اعملهم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -18865,7 +18881,7 @@ Als Hij jullie die (bezittingen) zou vragen en bij jullie zou aandringen, dan zo
 \eng{Here you are being invited to spend in the cause of God, but some among you turn stingy. Whoever is stingy is only being stingy on himself. God is the Rich, while you are the poor. If you turn away, He will substitute another people instead of you, then they will not be like you.} &
 Dat zijn jullie dus die opgeroepen worden om bijdragen te geven op Gods weg, maar onder jullie zijn er die gierig zijn. Maar wie gierig is, die is slechts gierig ten opzichte van zichzelf. God is de behoefteloze en jullie zijn de armen. Als jullie je afkeren zal Hij andere mensen in jullie plaats zetten. Dan zullen zij niet zijn zoals jullie. &
 Weet dat jullie degenen zijn die opgeroepen worden om bijdragen te geven op de Weg van Allah. En onder jullie zijn er die gierig zijn, en wie gierig is: voorwaar, hij is slechts gierig ten nadele van zichzelf. En Allah is de Behoefteloze, terwijl jullie de behoeftigen zijn. En als jullie je afwenden, dan zal Hij jullie door een ander volk vervangen, waarna zij niet als jullie zijn. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{48:1}{انا فتحنا لك فتحا مبينا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -18986,7 +19002,7 @@ Hij is Degene Die Zijn Boodschapper met de Leiding en de ware godsdienst (de Isl
 \eng{Muhammad, the messenger of God, and those who are with him, are severe against the ingrates, but merciful between themselves. You see them kneeling and prostrating, they seek God's blessings and approval. Their distinction is in their faces, as a result of prostrating. Such is their example in the Torah. Their example in the Injeel is like a plant which shoots out and becomes strong and thick and it stands straight on its trunk, pleasing to the farmers. That He may enrage the ingrates with them. God promises those among them who acknowledge and do good works forgiveness and a great reward.} &
 Mohammed is de gezant van God. En zij die met hem zijn zijn streng tegen de ongelovigen, maar onderling barmhartig. Jij ziet hen buigen en zich eerbiedig neerbuigen in hun streven naar goedgunstigheid van God en welgevallen. Hun kenteken is op hun gezicht als gevolg van het zich eerbiedig neerbuigen. Zo worden zij gekenschetst in de Taura en in de Indjiel worden zij gekenschetst als zaad dat zijn loten laat ontspruiten en dan sterker laat worden. Dan worden zij dikker en staan stevig op hun stengels zodat zij de zaaiers bevallen. Zo wil Hij door hen de ongelovigen woedend maken. God heeft degenen onder hen die geloven en de deugdelijke daden doen vergeving toegezegd en een geweldig loon. &
 Moehammad is de Boodschapper van Allah en degenen die met hem zijn, zijn streng tegenover de ongelovigen, maar onderling barmhartig. Jij ziet hen zich neerbuigen en zich neerknielen. Zij zoeken een gunst van Allah en Zijn welgevallen. Hun kenmerken zijn zichtbaar in hun gezichten door de sporen van neerknielingen. Dat is hun beschrijving in de Taurât. En hun beschrijving in de Indjîl is als een jonge plant waarvan de loten ontspruiten, waardoor hij sterker wordt. Daarna wordt hij steviger en staat hij recht op zijn wortel. Bij de planters veroorzaakt hij blijdschap. Hij (Allah) wil daarmee de ongelovigen woedend maken. Allah heeft degenen onder hen die geloven en goede werken verrichten vergeving en een geweldige beloning beloofd. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{49:1}{يايها الذين امنوا لا تقدموا بين يدي الله ورسوله واتقوا الله ان الله سميع عليم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -19063,7 +19079,7 @@ Zij menen jou een dienst te bewijzen door Moslim te worden. Zeg: ''Bewijst mij g
 \eng{Surely, God knows all the unseen in the heavens and the earth; God is Seer of everything you do.} &
 God kent het verborgene van de hemelen en de aarde en God doorziet wel wat jullie doen. &
 Voorwaar, Allah kent het onwaarneembare van de hemelen en de aarde. En Allah is Alziend over wat jullie doen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{50:1}{ق والقران المجيد}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -19248,7 +19264,7 @@ Op de Dag waarop de aarde over hen gespleten zal worden, haasten (zij zich te ve
 \eng{We are totally aware of what they say, and you are not to be a tyrant over them. So remind with the Quran those who fear My promise.} &
 Wij weten het best wat zij zeggen en jij bent geen bewindvoerder over hen. Vermaan dan met de Koran wie Mijn aanzegging vreest. &
 Wij weten het beste wat zij zeggen. En jij (Moehammad) bent niet als een dwinger over hen aangesteld. Vermaan daarom met de Koran degenen die Mijn Waarschuwing vrezen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{51:1}{والذريت ذروا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -19493,7 +19509,7 @@ Voorwaar, de zonden van degenen die onrecht plegen zijn gelijk aan de zonden van
 \eng{So woe to those who rejected from the day that is waiting for them.} &
 En wee hen die ongelovig zijn wegens hun dag die hun is aangezegd. &
 Wee dan degenen die ongelovig zijn op hun Dag die aangezegd is. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{52:1}{والطور}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -19694,7 +19710,7 @@ Wees geduldig met de beschikking van jouw Heer. Voorwaar, jij bent in Onze Ogen.
 \eng{Also during the night glorify Him, and at the setting of the stars.} &
 Lofprijs Hem ook in de nacht en als de sterren verbleken. &
 En in de nacht, prijst Zijn Glorie, en (ook) bij het vervagen van de sterren (in de vroege ochtend). \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{53:1}{والنجم اذا هوي}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -19947,7 +19963,7 @@ Terwijl jullie (de Koran) veronachtzamen? \\
 \eng{You shall prostrate to God, and serve.} &
 Buigt dan eerbiedig neer voor God en dient [Hem].'' &
 Knielt dan neer voor Allah en aanbidt (Hem). \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{54:1}{اقتربت الساعه وانشق القمر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -20172,7 +20188,7 @@ Voorwaar, de Moettaqôen verblijven in Tuinen en rivieren (het Paradijs). \\
 \eng{In a position of honor, at an Omnipotent King.} &
 op een waarachtige zetel bij een machtige koning. &
 In een waarachtige verblijfplaats, bij een machtige Heerser. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{55:1}{الرحمن}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -20489,7 +20505,7 @@ Welke gunsten van jullie Heer loochenen jullie dan? \\
 \eng{Glorified be the name of your Lord, Possessor of Majesty and Honor.} &
 Gezegend zij de naam van jouw Heer vol majesteit en eer. &
 Gezegend zij de Naam van jouw Heer, de Bezitter van Majesteit en Eer. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{56:1}{اذا وقعت الواقعه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -20878,7 +20894,7 @@ Voorwaar, dit is zeker de stellige Waarheid. \\
 \eng{You shall glorify the name of your Lord, the Great.*} &
 Prijs dan de geweldige naam van jouw Heer. &
 Prijst daarom de Naam van jouw Heer, de Geweldige. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{57:1}{سبح لله ما في السموت والارض وهو العزيز الحكيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -20999,7 +21015,7 @@ O jullie die geloven, vreest Allah en gelooft in Zijn Boodschapper, dan zal Hij 
 \eng{So that the followers of the book should know that they have no power over God's grace, and that all grace is in God's hand. He bestows it upon whoever/whomever He wills. God is Possessor of Infinite Grace.} &
 De mensen van het boek moeten goed weten dat zij niet de beschikking hebben over iets van Gods goedgunstigheid en dat de goedgunstigheid in Gods hand is; Hij geeft die aan wie Hij wil en God is vol van geweldige goedgunstigheid. &
 Opdat de Lieden van de Schrift zullen weten dat zij geen enkele macht hebben over de gunst van Allah en dat de gunst in de Hand van Allah is. Hij geeft die aan wie Hij wil. En Allah is de Bezitter van de geweldige gunst. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{58:1}{قد سمع الله قول التي تجدلك في زوجها وتشتكي الي الله والله يسمع تحاوركما ان الله سميع بصير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21092,7 +21108,7 @@ Allah heeft bepaald: ''Ik en Mijn Boodschapper zullen zeker overwinnen.'' Voorwa
 \eng{You will not find any people who acknowledge God and the Last day befriending those who oppose God and His messenger, even if they were their parents, or their children, or their siblings, or their tribe. For these, He decrees trust into their hearts, and supports them with a Spirit from Him, and He admits them into paradises with rivers flowing beneath, wherein they will abide. God is pleased with them, and they are pleased with Him. These are the party of God. Most assuredly, the party of God are the winners.} &
 Jij zult geen mensen vinden die in God en de laatste dag geloven die vriendschappelijk omgaan met hen die zich tegen God en Zijn gezant verzetten, ook al zijn het hun vaders of hun zonen of hun broers of hun familieleden. Zij zijn het in wier harten Hij het geloof geschreven heeft en Hij versterkt hen met een geest bij Hem vandaan. En Hij laat hen tuinen binnengaan waar de rivieren onderdoor stromen; daarin zullen zij altijd blijven. God is met hen ingenomen en zij zijn met Hem ingenomen. Dat zijn zij, de partij van God. En de partij van God, dat zijn zij die het welgaat. &
 Jij vindt geen volk dat in Allah en in de Laatste Dag gelooft dat degenen die Allah en Zijn Boodschapper tegenstreven bevriendt, ook al zijn het hun vaders, of hun zonen of hun broeders of hun stamgenoten. Zij zijn degenen bij wie Hij het geloof in hun harten heeft geschreven en Hij versterkt hen met hulp van Hem, en Hij doet hen Tuinen (het Paradijs) binnengaan waar de rivieren onder door stromen. Zij zijn daarin eeuwig levenden. Allah heeft welbehagen aan hen en zij hebben welbehagen aan Hem. Zij zijn degenen die van de groep van Allah zijn. Weet: voorwaar, de groep van Allah is de winnaar. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{59:1}{سبح لله ما في السموت وما في الارض وهو العزيز الحكيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21193,7 +21209,7 @@ Hij is Allah, Degene naast Wie er geen god is dan Hij, de Heerser, de Heilige, d
 \eng{He is God; the Creator, the Initiator, the Designer. To Him belong the most beautiful names. Glorifying Him is everything in the heavens and the earth. He is the Noble, the Wise.} &
 Hij is God, de schepper, de maker, de vormgever. Hem komen de mooiste namen toe. Hem prijst wat er in de hemelen is en wat er op de aarde is en Hij is de machtige, de wijze. &
 Hij is Allah, de Schepper, de Voortbrenger, de Vormer, aan Hem behoren de Schone Namen. Wat er in de hemelen en op de aarde is prijst Zijn Glorie. En Hij is de Almachtige, de Alwijze. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{60:1}{يايها الذين امنوا لا تتخذوا عدوي وعدوكم اوليا تلقون اليهم بالموده وقد كفروا بما جاكم من الحق يخرجون الرسول واياكم ان تومنوا بالله ربكم ان كنتم خرجتم جهدا في سبيلي وابتغا مرضاتي تسرون اليهم بالموده وانا اعلم بما اخفيتم وما اعلنتم ومن يفعله منكم فقد ضل سوا السبيل}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21250,7 +21266,7 @@ O Boodschapper, als de gelovige vrouwen tot jou gekomen zijn om trouw aan jou te
 \eng{O you who acknowledge, do not ally a people with whom God is angry; for they have given up regarding the Hereafter, just like the ingrates have given up on the people who are already in the graves.} &
 Jullie die geloven! Neemt geen medestanders op wie God vertoornd is. Zij hebben geen hoop voor het hiernamaals zoals de ongelovigen geen hoop hebben voor hen die in de graven zijn. &
 O jullie die geloven, neemt geen volk waarop Allah vertoornd is tot vrienden. Waarlijk, zij wanhopen aan het Hiernamaals, zoals de ongelovigen wanhopen aan (de opwekking van) de bewoners van de graven. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{61:1}{سبح لله ما في السموت وما في الارض وهو العزيز الحكيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21311,7 +21327,7 @@ En (Hij schenkt) nog iets waar jullie van houden: hulp van Allah en een nabije o
 \eng{O you who acknowledge, be God's supporters, as Jesus the son of Mary said to his disciples: ''Who are my supporters towards God?'' The disciples said, ''We are God's supporters.'' Thus, a group from the Children of Israel acknowledged, and another group rejected. So, We supported those who acknowledged against their enemy, and they were successful.} &
 Jullie die geloven! Weest Gods helpers. Zoals 'Isa, de zoon van Marjam, tot zijn discipelen zei: ''Wie zijn mijn helpers [op de weg] tot God?'' De discipelen zeiden: ''Wij zijn Gods helpers.'' Een groep van de Israëlieten geloofde dus, maar een andere groep bleef ongelovig. En Wij ondersteunden hen die geloofden tegen hun vijanden en zij kregen dus de heerschappij. &
 O jullie die geloven, weest helpers van (de godsdienst van) Allah, zoals 'Îsa, de zoon van Maryam, tot de metgezellen zei: ''Wie zijn mijn helpers voor (de oproep) tot Allah?'' De metgezellen zeiden: ''Wij zijn de helpers van Allah.'' Waarop een deel van de Kinderen van Israël geloofde en een ander deel niet geloofde. Vervolgens versterkten Wij degenen die geloofden tegen hun vijanden zodat zij zegevierders werden. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{62:1}{يسبح لله ما في السموت وما في الارض الملك القدوس العزيز الحكيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21360,7 +21376,7 @@ En wanneer de shalât is beëindigd, verspreidt jullie dan op de aarde en zoekt 
 \eng{If they come across any trade, or some entertainment, they rush to it and leave you standing, say, ''What God possesses is far better than entertainment or trade. God is the best Provider.''} &
 Maar wanneer zij koopwaar zien of een tijdverdrijf gaan zij erachteraan en zij laten jou staan. Zeg: ''Wat bij God is, is beter dan tijdverdrijf en koopwaar en God is werkelijk de beste voorziener.'' &
 En als zij handel of vermaak zien, dan lopen zij daarheen en laten jou staan (in de shalât). Zeg: ''Wat zich bij Allah bevindt is beter dan het vermaak en dan de handel. En Allah is de Beste der Voorzieners.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{63:1}{اذا جاك المنفقون قالوا نشهد انك لرسول الله والله يعلم انك لرسوله والله يشهد ان المنفقين لكذبون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21409,7 +21425,7 @@ En geeft bijdragen van waar Wij jullie mee voorzien hebben, voordat de dood tot 
 \eng{God will not delay any person if its time has come. God is Ever-aware of all that you do.} &
 Maar God zal niemand uitstel geven, wanneer zijn termijn is gekomen; God is welingelicht over wat jullie doen. &
 Maar Allah geeft geen ziel ooit uitstel als haar tijd is gekomen. En Allah is Alwetend over wat jullie doen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{64:1}{يسبح لله ما في السموت وما في الارض له الملك وله الحمد وهو علي كل شي قدير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21486,7 +21502,7 @@ Als jullie Allah een goede lening geven, dan zal Hij die voor jullie vermenigvul
 \eng{The Knower of all secrets and declarations; the Noble, the Wise.} &
 de kenner van het verborgene en het waarneembare, de machtige, de wijze. &
 De Kenner van het onwaarneembare en het waarneembare, de Almachtige, de Alwijze. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{65:1}{يايها النبي اذا طلقتم النسا فطلقوهن لعدتهن واحصوا العده واتقوا الله ربكم لا تخرجوهن من بيوتهن ولا يخرجن الا ان ياتين بفحشه مبينه وتلك حدود الله ومن يتعد حدود الله فقد ظلم نفسه لا تدري لعل الله يحدث بعد ذلك امرا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21539,7 +21555,7 @@ Een Boodschapper die voor jullie de verduidelijkende Verzen van Allah voordraagt
 \eng{God who created seven heavens and the same number of earths. His command descends between them, that you may know that God is capable of all things, and that God has encompassed all things with His knowledge.*} &
 God is het die zeven hemelen geschapen heeft en van de aarde evenveel, waarbij de ordening [van God] ertussen neerdaalde opdat jullie weten dat God almachtig is en dat God alles met Zijn kennis omvat. &
 Allah is Degene Die de zeven hemelen heeft geschapen en zo ook de aarde. De beschikking daalt tussen hen (hemel en aarde) neer, opdat jullie weten dat Allah de Almachtige over alle zaken is en dat Allah alle zaken in kennis omvat. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{66:1}{يايها النبي لم تحرم ما احل الله لك تبتغي مرضات ازوجك والله غفور رحيم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21592,7 +21608,7 @@ En de gelovigen heeft Allah de vrouw van Fir'aun als voorbeeld gegeven, toen zij
 \eng{Also Mary, the daughter of Imran, who maintained her chastity. So We blew into her from Our Spirit, and she acknowledged the words of her Lord and His books; and she was of those who were obedient.} &
 En Marjam, de dochter van 'Imraan die haar eerbaarheid bewaarde. Toen bliezen Wij er iets van Onze geest in en zij geloofde de woorden van haar Heer en Zijn boeken; zij behoorde tot de onderdanigen. &
 En (het voorbeeld van) Maryam, de dochter van Imrân, die haar eerbaarheid bewaard had, waarop Wij in haar van Onze geest bliezen en zij getuigde van de Waarheid van de Woorden van haar Heer en Zijn Schriften en zij behoorde tot de gehoorzamen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{67:1}{تبرك الذي بيده الملك وهو علي كل شي قدير}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21717,7 +21733,7 @@ Zeg: ''Hij is de Erbarmer, Wij geloven in Hem en wij vertrouwen op Hem.'' Jullie
 \eng{Say, ''What if your water becomes deep underground, who then can provide you with pure water?''} &
 Zeg: ''Hoe zien jullie het, als jullie water diep zou wegzakken, wie zou jullie dan bronwater brengen?'' &
 Zeg: ''Wat dachten jullie, als jullie water plotseling in de aarde verdwijnt, wie zal jullie dan stromend water brengen?'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{68:1}{نون والقلم وما يسطرون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -21930,7 +21946,7 @@ En bijna zouden degenen die niet geloven jou omwerpen met hun blikken, wanneer z
 \eng{It is but a reminder for the worlds.} &
 Toch is het niets anders dan een vermaning voor de wereldbewoners. &
 Terwijl hij (de Koran) niets anders is dan een Vermaning voor de werelden. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{69:1}{الحاقه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -22143,7 +22159,7 @@ En voorwaar, het is een zekere Waarheid. \\
 \eng{Therefore, you shall glorify the name of your Lord, the Great.*} &
 Prijs dan de geweldige naam van jouw Heer. &
 Prijs daarom de Naam van jouw Heer, de Geweldige. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{70:1}{سال سايل بعذاب واقع}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -22324,7 +22340,7 @@ Op de Dag waarop zij zich haastig uit hun graven spoeden, alsof zij zich naar af
 \eng{Their eyes are cast down, with shame covering them. This is the day which they were promised.} &
 terwijl zij met hun deemoedige blikken met vernedering overdekt worden. Dat is de dag die hun was aangezegd. &
 Hun blikken angstig teneergeslagen, overladen met vernedering. Dit is de Dag die jullie werd aangezegd. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{71:1}{انا ارسلنا نوحا الي قومه ان انذر قومك من قبل ان ياتيهم عذاب اليم}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -22441,7 +22457,7 @@ Voorwaar, als U hen (in leven) laat, zullen zij Uw dienaren doen dwalen en zij b
 \eng{''My Lord, forgive me and my parents and whoever enters my home as an acknowledger, and the acknowledging men and the acknowledging women; and do not increase the wicked except in destruction.''} &
 Mijn Heer, vergeef mij en mijn ouders en wie mijn huis als gelovige binnenkomen, en de gelovige mannen en vrouwen. En laat de ongelovigen alleen maar meer vernietigd worden.'' &
 Mijn Heer, vergeef mij en mijn ouders en wie mijn huis binnentreedt als gelovige, en de gelovige mannen en de gelovige vrouwen. En doe voor de onrechtplegers slechts de vernietiging toenemen.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{72:1}{قل اوحي الي انه استمع نفر من الجن فقالوا انا سمعنا قرانا عجبا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -22558,7 +22574,7 @@ Behalve aan een Boodschapper die Hem welgevallig is, en voorwaar, dan laat Hij v
 \eng{So that He knows that they have delivered the messages of their Lord, and He surrounds all that is with them, and He has counted everything in numbers.*} &
 om te weten of zij de boodschap van hun Heer verkondigen. Hij omvat wat bij hen is en Hij heeft alles opgesomd en nauwkeurig geteld.'' &
 Om te doen weten dat zij de Boodschappen van hun Heer overbrachten. En Hij omvat wat er bij hen is en Hij somt alle zaken nauwkeurig op. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{73:1}{يايها المزمل}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -22643,7 +22659,7 @@ Voorwaar, dit is een Vermaning en wie wil, laat hem een Weg nemen naar zijn Heer
 \eng{Your Lord knows that you rise a little less than two thirds of the night, and half of it, and one third of it, as well as a group of those who are with you. God measures the night and the day. He knows that you will not be able to keep up, so He pardons you. So study what is made easy of the Quran. He knows that there will be sick among you, and others that venture out in the land seeking from God's bounty, and others who are fighting in the cause of God, so study what you can of it. Hold the contact prayer and contribute towards betterment and give God a loan of righteousness. Whatever you put forth yourselves, you will find it with God, for it is better and a greater reward. Seek God's forgiveness, for God is Forgiving, Compassionate.} &
 Jouw Heer weet dat jij bijna tweederde van de nacht opblijft, of de helft, of een derde, samen met een groep van hen die bij jou horen. God bepaalt de maat van de nacht en de dag. Hij weet dat jullie het niet kunnen en heeft zich genadig tot jullie gewend. Leest dus uit de Koran een gemakkelijk gedeelte voor. Hij weet dat er onder jullie zieken zullen zijn en anderen die op de aarde rondtrekken om naar Gods gunst te streven en anderen die op Gods weg strijden. Leest er dus een gemakkelijk gedeelte uit voor, verricht de salaat, geeft de zakaat en geeft aan God een goede lening. En wat jullie eerder aan goeds gedaan hebben voor jullie zelf, dat zullen jullie bij God als nog beter en geweldiger beloond vinden. En vraagt God om vergeving; God is vergevend en barmhartig. &
 Voorwaar, jouw Heer weet dat jij bijna tweederde van de nacht, of de helft of een derde (in gebed) staat, en (ook) een groep van degenen die bij jou horen. En Allah kent de nacht en de dag. Hij weet dat jullie nooit (de hele nacht) de shalât kunnen verrichten, daarom heeft Hij jullie berouw aanvaard. Verricht van het nachtgebed wat gemakkelijk is voor jullie. Hij weet dat er onder jullie zieken zijn en anderen die door het land reizen, zoekend naar de gunst van Allah, en anderen die strijden op de Weg van Allah. En verricht van het nachtgebed wat gemakkelijk is voor jullie. En onderhoudt de shalât en geeft de zakât en leent aan Allah een goede lening. En wat jullie vooruitzenden voor julliezelf aan goede daden, jullie zullen het bij Allah aantreffen. Het is een betere en grotere beloning. En vraagt Allah om vergeving. Voorwaar, Allah is Vergevensgezind, Meest Barmhartig. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{74:1}{يايها المدثر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -22872,7 +22888,7 @@ Wie wil trekt er lering uit. \\
 \eng{None will take heed except if God wills. He is the source of righteousness and the source of forgiveness.} &
 Maar zij denken er slechts aan als God het wil. Hem komt het toe gevreesd te worden en Hem komt het toe te vergeven. &
 En zij trekken er geen lering uit, behalve als Allah het wil. Hij is het Die vrees toekomt en Hij is het Die het toekomt om te vergeven. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{75:1}{لا اقسم بيوم القيمه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -23037,7 +23053,7 @@ Zo maakte Hij daarvan de twee geslachten, de man en de vrouw. \\
 \eng{Is One as such then not able to resurrect the dead?} &
 Is dat niet Hij die in staat is de doden levend te maken? &
 Is Degene met zo'n macht niet in staat de doden tot leven te brengen? \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{76:1}{هل اتي علي الانسن حين من الدهر لم يكن شيا مذكورا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -23166,7 +23182,7 @@ En jullie zullen het niet willen, behalve als Allah het wil: voorwaar, Allah is 
 \eng{He admits whoever/whomever He wills to His mercy. As for the wicked, He has prepared for them a painful retribution.} &
 Hij laat wie Hij wil in Zijn barmhartigheid binnengaan. En de onrechtplegers, voor hen heeft Hij een pijnlijke bestraffing klaargemaakt. &
 Hij doet in Zijn Barmhartigheid binnengaan wie Hij wil. En Hij heeft een pijnlijke bestraffing bereid voor de onrechtvaardigen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{77:1}{والمرسلت عرفا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -23371,7 +23387,7 @@ Wee die Dag de loochenaars! \\
 \eng{So in what hadith after it will they acknowledge?} &
 Aan welk bericht zullen zij dan hierna nog geloven? &
 In welk Woord na hem (de Koran) zullen zij dan geloven? \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{78:1}{عم يتسالون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -23536,7 +23552,7 @@ Dat is de Dag van de Waarheid. Laat wie wil daarom een terugkeer naar zijn Heer 
 \eng{I have warned you of a retribution which is close, the day when man will look at what he has brought forth and the ingrate will say, ''I wish I were dust!''} &
 Wij hebben jullie gewaarschuwd voor een nabije bestraffing op de dag dat de mens kijkt naar wat zijn handen vroeger gedaan hebben en waarop de ongelovige zegt: ''O wee, was ik maar stof!'' &
 Voorwaar, Wij hebben jullie gewaarschuwd voor een nabije bestraffing op de Dag dat de mens zal kijken naar wat zijn handen vroeger bedreven, en waarop de ongelovige zal zeggen: ''O wee, was ik maar aarde.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{79:1}{والنزعت غرقا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -23725,7 +23741,7 @@ Voorwaar, jij bent slechts een vermaner voor wie het (Uur) vreest. \\
 \eng{For the day they see it, it will be as if they had remained an evening or half a day.} &
 En op de dag dat zij het zien zal het zijn alsof het voor hen niet langer dan een avond of de morgen erna geduurd heeft. &
 Op de Dag dat zij het (Uur) zien, zal het zijn alsof zij slechts een avond of de morgen op de aarde verbleven. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{80:1}{عبس وتولي}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -23898,7 +23914,7 @@ En een duisternis zal hen omhullen. \\
 \eng{Those are the ingrates, the wicked.} &
 Dat zijn zij, de ongelovigen, de overtreders. &
 Zij zijn degenen die de zondige ongelovigen zijn. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{81:1}{اذا الشمس كورت}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24019,7 +24035,7 @@ Voor wie van jullie het rechte (Pad) wil volgen. \\
 \eng{You cannot will anything except if God also wills, the Lord of the worlds.*} &
 Maar jullie zullen het slechts willen als God het wil, de Heer van de wereldbewoners. &
 En jullie kunnen niets willen, behalve wanneer Allah, de Heer der Werelden, het wil. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{82:1}{اذا السما انفطرت}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24100,7 +24116,7 @@ Nogmaals, wat doet jou weten wat de Dag des Oordeels is? \\
 \eng{The day when no person possesses anything for any other person, and the decision on that day is to God.*} &
 Op de dag waarop niemand iets voor een ander kan uitrichten. Op die dag heeft God het bevel. &
 Op die Dag is geen ziel bij machte iets voor een (andere) ziel te doen. En het bevel behoort op die Dag aan Allah. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{83:1}{ويل للمطففين}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24249,7 +24265,7 @@ Op rustbanken kijken zij toe. \\
 \eng{Have the ingrates not been reprised for what they used to do?} &
 Zijn de ongelovigen beloond voor wat zij gedaan hebben? &
 Worden de ongelovigen niet vergolden voor wat zij plachten te doen? \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{84:1}{اذا السما انشقت}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24354,7 +24370,7 @@ Verkondig hun dan een pijnlijke bestraffing. \\
 \eng{Except for those who acknowledge and do good works, they will have a reward that will not end.} &
 Maar niet aan hen die geloven en de deugdelijke daden doen; voor hen is er een ononderbroken loon. &
 Behalve degenen die geloven en goede daden verrichten, voor hen is er een oneindige beloning. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{85:1}{والسما ذات البروج}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24447,7 +24463,7 @@ Het is zelfs een glorierijke Koran. \\
 \eng{In a tablet, preserved.*} &
 op een goedbewaard paneel. &
 In de Lauhoelmahfôezh. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{86:1}{والسما والطارق}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24520,7 +24536,7 @@ En Ik beraam een plan. \\
 \eng{So respite the ingrates, respite them for a while.} &
 Geef de ongelovigen dan maar uitstel, verleen hun enig uitstel. &
 Geef daarom de ongelovigen uitstel, geef hun even uitstel. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{87:1}{سبح اسم ربك الاعلي}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24601,7 +24617,7 @@ Voorwaar, dit staat zeker in de vroegere bladen. \\
 \eng{The scripts of Abraham and Moses.} &
 de bladen van Ibrahiem en Moesa. &
 De bladen van Ibrâhîm en Môesa. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{88:1}{هل اتيك حديث الغشيه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24710,7 +24726,7 @@ Voorwaar, tot Ons is hun terugkeer. \\
 \eng{Then to Us is their judgment.} &
 Dan is bij Ons hun afrekening. &
 En voorwaar: aan Ons is hun afrekening. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{89:1}{والفجر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24835,7 +24851,7 @@ En treed binnen onder Mijn dienaren. \\
 \eng{''Enter My Paradise.''} &
 en treed binnen in Mijn tuin.'' &
 En treed binnen in Mijn Paradijs. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{90:1}{لا اقسم بهذا البلد}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24920,7 +24936,7 @@ En degenen die niet in Onze verzen geloven; zij zijn degenen die de mensen van d
 \eng{Upon them is a fire closed over.} &
 zij worden door een vuur omsloten. &
 Over hen is een omhullend vuur (de Hel). \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{91:1}{والشمس وضحيها}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -24985,7 +25001,7 @@ Maar zij loochenden hem en slachtten haar. Toen vernietigde hun Heer hen wegens 
 \eng{Yet, those who came after remain heedless.} &
 en Hij vreesde de gevolgen niet. &
 En Hij vreesde de gevolgen daarvan niet. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{92:1}{واليل اذا يغشي}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25074,7 +25090,7 @@ Maar om het welbehagen van zijn Heer, de Verhevene, te zoeken. \\
 \eng{He will be satisfied.} &
 En Hij zal tevreden zijn. &
 Hij zal zeker tevreden zijn. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{93:1}{والضحي}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25123,7 +25139,7 @@ En wat de bedelaar betreft: wijs hem niet af. \\
 \eng{You shall proclaim the blessings from your Lord.} &
 En de genade van jouw Heer, vertel daarvan! &
 En wat de gunsten van jouw Heer betreft: spreek daarover! \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{94:1}{الم نشرح لك صدرك}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25160,7 +25176,7 @@ Wanneer jij dan een taak volbracht hebt, streef dan (verder). \\
 \eng{To your Lord you shall seek.} &
 en richt je verlangen tot jouw Heer. &
 En richt jouw verlangen tot jouw Heer. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{95:1}{والتين والزيتون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25197,7 +25213,7 @@ Wat doet jullie dan het oordeel nog loochenen? \\
 \eng{Is God not the wisest of the wise?} &
 Is God niet de wijste van hen die oordelen? &
 Is Allah niet de Rechtvaardigste der Rechters? \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{96:1}{اقرا باسم ربك الذي خلق}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25278,7 +25294,7 @@ Wij zullen de Zabâniyah roepen. \\
 \eng{So do not obey him, prostrate and come near.} &
 Nee hoor, gehoorzaam hem niet, maar buig je eerbiedig neer en kom nader. &
 Nee, gehoorzaam hem niet, en kniel je neer en zoek toenadering (tot Allah). \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{97:1}{انا انزلنه في ليله القدر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25303,7 +25319,7 @@ De Engelen en de Geest (Djibrîl) daalden in haar neer met de toestemming van hu
 \eng{It is peaceful until the coming of dawn.} &
 Vol vrede is hij tot aan de opkomst van de dageraad. &
 Vrede heerst (in deze nacht), tot aan de ochtendschemering. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{98:1}{لم يكن الذين كفروا من اهل الكتب والمشركين منفكين حتي تاتيهم البينه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25340,7 +25356,7 @@ Voorwaar, degenen die geloven en goede werken verrichten, zij zijn degenen die d
 \eng{Their reward with their Lord is the gardens of Eden with rivers flowing beneath them; they abide eternally therein. God is satisfied with them, and they are satisfied with Him. That is for whoever feared His Lord.} &
 Als hun loon zijn er bij hun Heer de tuinen van 'Adn waar de rivieren onderdoor stromen; daarin zullen zij altijd blijven. God heeft een welgevallen aan hen en zij hebben een welgevallen aan Hem. Dat is voor wie zijn Heer vreest. &
 Hun beloningen bij hun Heer zijn de Tuinen van 'Adn (het Paradijs), waar de rivieren onder door stromen, zij zijn eeuwig levenden daarin, voor altijd. Allah is met hen behaagd en zij zijn met Hem behaagd. Dat is voor wie zijn Heer vreest. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{99:1}{اذا زلزلت الارض زلزالها}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25377,7 +25393,7 @@ Wie iets goeds deed ter grootte van een mosterdzaadje, zal het dan zien. \\
 \eng{Whoever does an atom’s weight of evil will see it.} &
 En wie ook maar een greintje kwaads heeft gedaan die zal het zien. &
 En wie iets kwaads deed ter grootte van een mosterdzaadje, zal het dan zien. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{100:1}{والعديت ضبحا}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25426,7 +25442,7 @@ En onthuld wordt wat in de harten is. \\
 \eng{That their Lord has been fully cognizant of them?} &
 dan is hun Heer op die dag over hen welingelicht. &
 Dat hun Heer op die Dag zeker Alwetend over hen is? \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{101:1}{القارعه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25475,7 +25491,7 @@ En wat doet jou weten wat zij is? \\
 \eng{A blazing fire.} &
 Een gloeiend vuur! &
 Een verbandende Hel. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{102:1}{الهيكم التكاثر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25512,7 +25528,7 @@ Nogmaals, jullie zullen haar met een zeker oog zien. \\
 \eng{Then you will be questioned, on that day, about the blessings.} &
 Dan zullen jullie op die dag ondervraagd worden over het geluk. &
 Dan zullen jullie op die Dag ondervraagd worden over de genietingen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{103:1}{والعصر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25529,7 +25545,7 @@ Voorwaar, de mens lijdt zeker verlies. \\
 \eng{Except those who acknowledge, carry out the reforms, exhort one another with the truth and exhort one another with perseverance.} &
 Alleen niet zij die geloven en de deugdelijke daden doen, die elkaar aanmanen tot de waarheid en die elkaar aanmanen tot volharding. &
 Behalve degenen die geloven en goede daden verrichten en elkaar aansporen tot de Waarheid en elkaar aansporen tot geduld. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{104:1}{ويل لكل همزه لمزه}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25570,7 +25586,7 @@ Voorwaar, het zal hen omhullen. \\
 \eng{In extended columns.} &
 in langgerekte zuilen. &
 In langgerekte zuilen. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{105:1}{الم تر كيف فعل ربك باصحب الفيل}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25595,7 +25611,7 @@ Die stenen van klei op hen wierpen. \\
 \eng{Until He turned them like devoured hay.} &
 En hij maakte hen als afgevreten halmen. &
 Zo maakte Hij hen als (door wormen) aangevreten bladeren. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{106:1}{لايلف قريش}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25616,7 +25632,7 @@ Daarom moeten zij de Heer van dit Huis aanbidden. \\
 \eng{The One who fed them from hunger, and protected them from fear.} &
 die hun voedsel tegen de honger geeft en die hen beveiligt voor de angst. &
 Degene Die hun tegen de honger voedt en hen veilig stelt voor de angst. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{107:1}{اريت الذي يكذب بالدين}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25649,7 +25665,7 @@ Degenen die er een vertoning van maken. \\
 \eng{They refuse aid.} &
 en die de hulpverlening weigeren. &
 En die de levensbenodigdheden tegenhouden. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{108:1}{انا اعطينك الكوثر}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25666,7 +25682,7 @@ Verricht daarom de shalât voor jouw Heer en slacht offerdieren. \\
 \eng{Indeed your rival will be the loser.} &
 Jouw hater, hij is de alleenstaande. &
 Voorwaar, jouw hater, hij is het die afgesneden is. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{109:1}{قل يايها الكفرون}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25695,7 +25711,7 @@ En jullie zullen nooit aanbidders worden van wat ik aanbid. \\
 \eng{''To you is your system, and to me is mine.''} &
 Jullie hebben jullie godsdienst en ik heb mijn godsdienst.'' &
 Daarom, voor jullie jullie godsdienst en voor mij mijn godsdienst. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{110:1}{اذا جا نصر الله والفتح}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25712,7 +25728,7 @@ En jij (O Mohammed) de mensen in grote groepen tot de godsdienst van Allah ziet 
 \eng{You shall glorify your Lord's grace, and seek His forgiveness. He is the Redeemer.} &
 prijs dan de lof van jouw Heer en vraag Hem om vergeving; Hij is een genadegever. &
 Prijs dan de Glorie van jouw Heer en vraag Hem om vergeving. Voorwaar, Hij is Berouwaanvaardend. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{111:1}{تبت يدا ابي لهب وتب}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25737,7 +25753,7 @@ En ook zijn vrouw, aandraagster van brandhout. \\
 \eng{With a twisted rope on her neck.} &
 met om haar nek een koord van touw. &
 Om haar nek een touw van vezels. \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{112:1}{قل هو الله احد}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25758,7 +25774,7 @@ Hij heeft niet verwekt en is niet verwekt. \\
 \eng{''None is equal to Him.''} &
 en niet één is er aan Hem gelijkwaardig.'' &
 En niet één is aan Hem gelijkwaardig.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{113:1}{قل اعوذ برب الفلق}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25783,7 +25799,7 @@ En tegen het kwaad van hen die op knopen blazen. \\
 \eng{''From the evil of the envious when they envy.''} &
 en tegen het kwaad van een jaloerse wanneer hij jaloers is.'' &
 En tegen het kwaad van een jaloerse wanneer deze jaloers is.'' \\
-\midrule
+\midrule\nopagebreak
 \bsm
 \ara{114:1}{قل اعوذ برب الناس}
 \eng{In the name of God, the Gracious, the Compassionate.}\newline
@@ -25812,7 +25828,7 @@ Degene die in de harten van de mensen influistert. \\
 \eng{''From among the Jinn and people.''} &
 of hij nu tot de djinn of tot de mensen behoort.'' &
 Van de Djinn's en de mensen. \\
-% \midrule%
+% END TEXTS
 %\clearpage  % needed for changetext will otherwise mess things up
 % \bottomrule%
 \end{longtable}
