@@ -1,12 +1,4 @@
-% To generate a pdf from these files in Ubuntu:
-%
-%    sudo aptitude install texlive-xetex texlive-latex-recommended \
-%                          texlive-lang-dutch tex-gyre ttf-sil-scheherazade
-%    xelatex study-quran; bibtex study-quran; xelatex study-quran; xelatex study-quran
-%
-% Replace `texlive-lang-dutch` with any hyphenation localizations you might want.
-%
-% I don't use pdflatex but XeTeX since it allows me to use gyre's lowercase numbers.
+% See the README.md file in the same dir for build instructions...
 
 % vim:set ft=tex:
 
@@ -75,6 +67,7 @@
 %%% \renewcommand*{\hangfootparskip}{0pt}
 
 
+\usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{changepage}
 \usepackage{array}
@@ -204,11 +197,17 @@
 \pagestyle{empty}
 \begingroup
 \begin{center}
-\vspace*{3cm}
+
+\begin{figure}
+  \vspace*{2cm}
+  \centering
+  \includegraphics{al-quran-calligraphy.pdf}
+\end{figure}
+
 
 {\fontsize{68}{82}\selectfont Studie Koran}\\[1cm]
 
-{\Large \emph{Een Arabische Koran met drie vertalingen voor studie doeleinden.}}\\[12cm]
+{\Large \emph{Een Arabische Koran met drie vertalingen voor studie doeleinden.}}\\[7cm]
 
 versie 0.2\\\today\\[1.5cm]
 
@@ -1768,7 +1767,7 @@ O Lieden van het Boek, waarom redetwisten jullie over Ibrâhîm? De Taurât en d
 \ara{3:66}{هانتم هولا حججتم فيما لكم به علم فلم تحاجون فيما ليس لكم به علم والله يعلم وانتم لا تعلمون}
 \eng{Here you have debated in what you knew; so why then do you debate in what you do not know? God knows while you may not know.} &
 Zo zijn jullie nu. Jullie hebben daarover getwist waar jullie kennis van hebben, maar waarom twisten jullie over iets waar jullie geen kennis van hebben? &
-Zo, jullie zijn degenen die geredetwist hebben over iets waarover jullie kennis hadden, maar waarom redetwistten jullie over iets waarover jullie geen kennis hebben? En Allah weet, en jullie weten niet. \\
+Zo, jullie zijn degenen die geredetwist hebben over iets waarover jullie kennis hadden, maar waarom redetwisten jullie over iets waarover jullie geen kennis hebben? En Allah weet, en jullie weten niet. \\
 \ara{3:67}{ما كان ابرهيم يهوديا ولا نصرانيا ولكن كان حنيفا مسلما وما كان من المشركين}
 \eng{Abraham was neither a Jew nor a Nazarene, but he was a monotheist who peacefully surrendered; he was not of those who set up partners.} &
 Ibrahiem was niet jood, noch christen, maar hij was een aanhanger van het zuivere geloof, die zich [aan God] overgaf en hij behoorde niet tot de veelgodendienaars. &
@@ -25828,6 +25827,7 @@ Degene die in de harten van de mensen influistert. \\
 \eng{''From among the Jinn and people.''} &
 of hij nu tot de djinn of tot de mensen behoort.'' &
 Van de Djinn's en de mensen. \\
+
 % END TEXTS
 %\clearpage  % needed for changetext will otherwise mess things up
 % \bottomrule%
