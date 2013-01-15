@@ -7,6 +7,10 @@ Currently it is set up for a Dutch version (includes a Dutch
 introduction and title page), but it is easily adjusted
 for other languages.
 
+[Download the Study Quran](https://github.com/oqc/study-quran/raw/master/study-quran.pdf)
+
+This link should give you the latest version.
+
 
 ## Building the PDF from these files
 
